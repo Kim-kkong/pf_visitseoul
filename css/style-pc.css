@@ -1,0 +1,470 @@
+@charset "utf-8";
+
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle; max-width: 100%;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle; overflow: hidden;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+.mobile {display: none !important;}
+br.only-m {content: '';}
+br.only-m::after {content: '\00a0';}
+
+
+/* common */
+body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; color: #333333; background: #ffffff;}
+#wrapper {min-width: 770px; overflow: hidden;}
+#skip-nav {position: fixed; left:0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+
+#wrapper > div.mobile-quick-menu {display: none;}
+#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000;}
+#wrapper > div.quick-menu.on {position: fixed; right: 0.5px; top: 50%; transform: translate(0, -50%); z-index: 1000; box-shadow: 5px 3px 5px 0 rgba(2, 0, 5, 0.3), -5px -5px 5px 5px rgba(0, 0, 0, 0.2) inset;}
+
+#wrapper > div.quick-menu p {position: absolute; width: 151px; height: 40px; background-color: #4a4a4a; color: #ffffff; font-size: 16px; text-align: center; line-height: 40px; left: 0; top: 20%; transform: translate(-63%, -42%) rotate(270deg);}
+#wrapper > div.quick-menu p span {position: relative; top: 17%; padding-left: 6px;}
+#wrapper > div.quick-menu ul {width: 110px; height: 360px; background-color: #ffffff;}
+#wrapper > div.quick-menu ul li {position: relative; width:100%; height: 89px; border: 1px solid #e2e2e2;}
+#wrapper > div.quick-menu ul li + li {border-top: none;}
+
+#wrapper > div.quick-menu ul li a {width: 110px; height: 89px; position: absolute; }
+#wrapper > div.quick-menu ul li a span {width: 110px; position: absolute; left: 0; top: 30px; left: 50%; top: 60%; transform: translate(-50%, 10%); text-align: center; font-size: 14px; color: #4a4a4a;}
+#wrapper > div.quick-menu ul li a img {position: relative; width: 26px; height: 26px; left: 50%; top: 30%; transform: translate(-50%, -10%);}
+#wrapper > div.quick-menu ul li + li img {width: 27px;}
+#wrapper > div.quick-menu ul li:nth-child(3) img {width: 33px; height: 33px; left: 50%; top: 30%; transform: translate(-50%, -30%);}
+
+#wrapper > div.quick-menu ul li.last-list {}
+#wrapper > div.quick-menu ul li.last-list a {width: 25px; height: 25px;}
+#wrapper > div.quick-menu ul li.last-list a:nth-child(1) {left: 25%; top: 15%;}
+#wrapper > div.quick-menu ul li.last-list a:nth-child(2) {left: 55%; top: 15%;}
+#wrapper > div.quick-menu ul li.last-list a:nth-child(3) {left: 25%; top: 50%;}
+
+#wrapper > a.top-button {position: fixed; z-index: 1000000; right: 2%; top: 90vh; border: 1px solid #555555; width: 50px; height: 50px; border-radius: 30px; text-align: center; background-color: #ffffff;}
+#wrapper > a.top-button > img {position: relative; left: 0; top: 50%; transform: translate(0, -50%); width: 16px;}
+
+#header {position: fixed; left: 0; top: 0;  width: 100%; height: 90px; background-color: #ffffff; color: #666666; font-size: 20px; box-sizing: border-box; z-index: 1000;}
+#header > div.header-box {position: relative; height: 100%;}
+#header h1 {position: absolute; left: 3%; top: 40%; transform: translate(0, -50%); width: 220px; z-index: 10000;}
+#header h1 a {display: block;}
+
+
+#gnb {position: absolute; left: 50%; top: 25px; transform: translate(-50%, 0); z-index: 1000;}
+#gnb > div.mobile-gnb {display: none;}
+#gnb > ul > li {float: left;}
+
+#gnb > ul > li > a {display: block; padding: 10px 25px 23px 25px; font-size: 20px;}
+#gnb > ul > li > a > i {display: none;}
+#gnb > ul > li.open > a,
+#gnb > ul > li > a:hover {border-bottom: 5px solid #137DC3; transition: all 0.1s;}
+
+#gnb > ul > li > div.sub {display: none;}
+
+
+#gnb > ul > li > div.sub {position: fixed; left: 0; top: 90px; width: 100%; color: #000000; background-color: #ffffff; height: 60vh; z-index: 1000;}
+#gnb > ul > li > div.sub > div.content {position: relative; width: 1000px; height: 500px; left: 50%; top: 10%; transform: translate(-50%, 0);}
+
+#gnb > ul > li > div.sub > div.content > div.title {width: 250px; height: 100%;}
+#gnb > ul > li > div.sub > div.content > div.title h3 {font-size: 42px;}
+#gnb > ul > li > div.sub > div.content > div.title p {font-size: 16px; margin-top: 10px;}
+#gnb > ul > li > div.sub > div.content > div.inner {position: absolute; width: 500px; left: 25%; top: 0; color: #333333; font-size: 20px;}
+#gnb > ul > li > div.sub > div.content > div.inner > ul > li {}
+#gnb > ul > li > div.sub > div.content > div.inner > ul > li:hover {color: #137DC3; transition: all 0.3s;}
+#gnb > ul > li > div.sub > div.content > div.inner > ul > li + li {padding-top: 20px;}
+
+/* #gnb div.sub div.content-box { margin: 0 auto;}
+#gnb div.sub > div.top > div > ul {overflow: hidden;}
+#gnb div.sub > div.top > div > ul > li {float: left; width: 20%; margin-bottom: 20px;}
+#gnb div.sub > div.top > div > ul > li:nth-child(5n + 1) {clear: left;}
+#gnb div.sub > div.top > div > ul > li > a {font-size: 14px; font-weight: 700; color: #ffffff;}
+
+#gnb div.sub > div.top > div > ul > li > ul {margin-top: 15px;}
+#gnb div.sub > div.top > div > ul > li > ul > li + li {margin-top: 6px;} */
+
+#side-menu {position: absolute; width: 100%; height: 90px; right: 70px; top: 0;}
+#side-menu li {float: left; position: relative; left: 80%; top: 28px; height: 30px;}
+#side-menu li div.title {font-weight: 540; top: 5%}
+#side-menu li div.title.on {color: #0066eb;}
+#side-menu li div.title span {left: 10%; top: 30%; transform: translate(-30%, 15%);}
+#side-menu > li + li {padding-left: 20px;}
+#side-menu li img {width: 18px; padding: 10px;}
+#side-menu li div {position: relative; top: 5px;}
+#side-menu li div a p {position: absolute; top: 65%; transform: translate(50%, -10%); overflow: hidden; width: 110px; height: 10px; text-indent: -9999px;}
+
+
+#side-menu li div.search {display: none;}
+#side-menu li div.familysite {display: none;}
+#side-menu li div.language {display: none;}
+
+#side-menu li div.search {position: absolute; width: 487px; height: 436px; left: -400px; top: 60px; background-color: #ffffff;}
+#side-menu li div.search div.search-box {position: relative; left: 50%; top: 25px; width: 450px; height: 40px; transform: translate(-50%, 0); font-size: 18; border: none; border-bottom: 1px solid #666666;}
+#side-menu li div.search div.search-box input {position: relative; width: 395px; height: 33px; border: none; font-size: 20px; top: 4px;}
+#side-menu li div.search ol {position: absolute; width: 435px; height: 297px; top: 10%; left: 50%; transform: translate(-50%, 20%);}
+#side-menu li div.search ol h4 {font-weight: 800; color: #000000;}
+
+#side-menu li div.search ol div.list-1 {position: absolute; width: 200px; height: 290px;}
+#side-menu li div.search ol div.list-2 {position: absolute; width: 200px; height: 290px; right: 0}
+#side-menu li div.search ol div.list-1 li {position: relative; left: 0; top: 20px; width: 180px; margin: 20px 0 0 10px; }
+#side-menu li div.search ol div.list-1 li > a {position: absolute; padding-left: 50px;}
+#side-menu li div.search ol li > p {position: absolute; width: 28px; height: 28px; border-radius: 5px; background-color: #535353; color: #ffffff; text-align: center; font-size: 15px; line-height: 28px;}
+#side-menu li div.search ol div.list-2 li {position: relative; left: 0; top: 20px; width: 180px; margin: 20px 0 0 10px; }
+#side-menu li div.search ol div.list-2 li > a {position: absolute; padding-left: 50px;}
+#side-menu li div.search > a {width: 487px; height: 35px; border: 1px solid #cbcbcb; position: absolute; left: -2px; bottom: 0; background-color: #ededed;}
+#side-menu li div.search > a > img {position: absolute; right: 0; }
+
+
+#side-menu li div.familysite {position: absolute; background-color: #ffffff; width: 220px; height: 300px; left: 0; top: 50px; border: 1px solid #cbcbcb; }
+#side-menu li div.familysite ul li {position: relative; left: 12px; top: 12px; width: 190px; padding: 2px; font-size: 16px; font-weight: 500; background-color: #f6f6f6;  line-height: 30px;}
+#side-menu li div.familysite ul li a {padding-left: 8px;}
+#side-menu li div.familysite ul li + li {margin-top: 6px;}
+
+#side-menu li div.language {position: absolute; background-color: #ffffff; width: 220px; height: 300px; right: 0; top: 50px; border: 1px solid #cbcbcb; }
+#side-menu li div.language ul li {position: relative; left: 12px; top: 12px; width: 190px; padding: 2px; font-size: 16px; font-weight: 500; background-color: #f6f6f6;  line-height: 30px;}
+#side-menu li div.language ul li a {padding-left: 8px;}
+#side-menu li div.language ul li + li {margin-top: 6px;}
+#side-menu li div.language ul li a span {font-size: 9px; color: #188BD8;}
+
+
+#main {position: relative; top: 0; left: 0;}
+#main-visual {position: relative;}
+#main-visual h2 {position: absolute; left: 30%; top: 35%; transform: translate(-50%, 50%); font-size: 14px; font-weight: 600; color: #ffffff; width: 420px; z-index: 100;}
+#main-visual h2 > em {font-size: 48px;}
+#main-visual div.slide-box {position: relative; width: 100%; height: 46vw; overflow: hidden;}
+#main-visual div.slide-box p.dummy {opacity: 0;}
+#main-visual div.image-box div.box ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main-visual div.slide-box div.box ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main-visual div.slide-box div.box ul.slide > li:first-child {display: block;}
+#main-visual div.slide-box div.box ul.slide > li > img {width: 100%; height: 100%; display: block;}
+
+#main-visual div.slide-box div.box div.indicator {position: absolute; left: 0; bottom: 5%; width: 100%; text-align: center;}
+#main-visual div.slide-box div.box div.indicator > ul {display: inline-block; vertical-align: middle; margin-right: 5px;}
+#main-visual div.slide-box div.box div.indicator > ul > li {float: left;} 
+#main-visual div.slide-box div.box div.indicator > ul > li > a {display: block; width: 8px; height: 8px; background-color: none; border: 2.4px solid #ffffff; overflow: hidden; text-indent: -9999px; border-radius: 100px; transition: all 0.3s;}
+#main-visual div.slide-box div.box div.indicator > ul > li.on a {width: 8px; background-color: #ffffff;}
+#main-visual div.slide-box div.box div.indicator > ul > li + li {margin-left: 15px;}
+#main-visual div.slide-box div.box div.indicator a.play {display: inline-block; width: 24px; height: 24px; border-radius: 100px; overflow: hidden; box-sizing: border-box; color: #ffffff; vertical-align: middle;}
+#main-visual div.slide-box div.box p.control a {position: absolute; top: 50%; transform: translate(0, -50%); overflow: hidden; width: 50px; height: 100px; text-indent: -9999px;}
+#main-visual div.slide-box div.box p.control a::before {content:''; position: absolute; left: 50%; top: 50%; width: 80px; height: 80px; box-sizing: border-box; border: 2px solid #ffffff; transform: translate(-50%, -50%) rotate(45deg); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2), 2px 2px 5px 0 rgba(0, 0, 0, 0.2) inset;}
+#main-visual div.slide-box div.box p.control a.prev {left: 50px;}
+#main-visual div.slide-box div.box p.control a.prev::before {left: calc(50% + 50px);}
+#main-visual div.slide-box div.box p.control a.next {right: 50px;}
+#main-visual div.slide-box div.box p.control a.next::before {left: calc(50% - 50px);}
+
+
+#season {left: 0; top: 0; position: relative; height: 80vh;}
+#season h3 {font-size: 34px; font-weight: 200; text-align: center; padding: 4% 0 2% 0; color: #222222;}
+#season ul.title {position: absolute; left: 50%; top: 150px; transform: translate(-50%, 0); text-align: center;}
+#season ul.title li {float: left; font-size: 18px; font-weight: 100; color: #555555; padding: 10px 20px 35px 20px; }
+#season ul.title > li > a:focus {text-decoration: underline; font-weight: 700; color: #222222;}
+
+#season div.inner-box {position: relative; top: 70px; width: 100%; height: 380px;}
+#season div.inner-box ul {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-bottom: 30px; }
+#season div.inner-box ul li {float: left; left: 0; top: 0; padding-top: 20px;}
+#season div.inner-box ul li + li {padding-left: 20px;}
+#season div.inner-box ul li a img {width: 380px; height: 277px;}
+#season div.inner-box ul li a div.hover {position: absolute; left: 0; top: 20px; width: 380px; height: 277px; text-align: center;}
+
+#season div.inner-box ul li + li a div.hover {position: absolute; left: 400px; top: 20px; width: 380px; height: 277px; text-align: center;}
+#season div.inner-box ul li + li + li a div.hover {position: absolute; left: 800px; top: 20px; width: 380px; height: 277px; text-align: center;}
+#season div.inner-box ul li a div.hover p {display: none;}
+#season div.inner-box ul li a div:hover {width: 380px; height: 277px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
+#season div.inner-box ul li a div:hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
+#season div.inner-box ul li a h5 {padding: 10px 0; font-size: 22px; font-weight: 500; color: #333333;}
+#season div.inner-box ul li a p {font-size: 14px; color: #000000;}
+
+#season div.inner-box ul:nth-child(2) {display: none;}
+#season div.inner-box ul:nth-child(3) {display: none;}
+
+
+#banner {position: relative; width: 100%; height: 235px; top: 50px;}
+#banner ul {position: absolute; width: 100%; height: 100%; left: 0; top: 0; padding-bottom: 30px;}
+#banner ul li {position: absolute; width: 1200px; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -30%);}
+#banner a img.prev {position: absolute; left: 9%; top: 150px; width: 60px;}
+#banner a img.next {position: absolute; right: 9%; top: 150px; width: 60px;}
+
+
+#shopping {position: relative; height: 1700px; width: 100%; left: 0; top: 200px;}
+#shopping h3 {font-size: 34px; font-weight: 200; text-align: center; padding-bottom: 50px; color: #222222;}
+#shopping div.top5 {position: relative; left: 0; top: 0;}
+#shopping ul {position: absolute; width: 1200px; height: 1300px; left: 50%; top: 0; transform: translate(-50%, 0);}
+#shopping ul li {float: left;}
+#shopping ul li img {}
+#shopping ul li div.detail {width: 370px; height: 192px;}
+#shopping ul li div.detail h4 {font-size: 22px; color: #333333;}
+#shopping ul li div.detail p {font-size: 15px; color: #333333;}
+
+#shopping ul li.top1 {height: 420px;}
+#shopping ul li.top1 a div.hover {position: absolute; left: 0; top: 0; width: 785px; height: 380px; text-align: center;}
+#shopping ul li.top1 a div.hover p {display: none;}
+#shopping ul li.top1 a div.hover:hover {width: 785px; height: 380px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
+#shopping ul li.top1 a div.hover:hover p {display: block; position: relative; top: 45%; color: #ffffff; font-weight: 700;}
+#shopping ul li.top1 a div.detail {position: relative; right: -100%; top: 0; transform: translate(10%, -195%); background: url(../img/01.png) left -73px no-repeat;}
+#shopping ul li.top1 a div.detail h4 {position: relative; top: 50%; left: 0;}
+#shopping ul li.top1 a div.detail p {position: relative; top: 80%; left: 0;}
+
+#shopping ul li.top2 {height: 420px;}
+#shopping ul li.top2 a img {right: 0; top: 0; transform: translate(50%, 0);}
+#shopping ul li.top2 a div.hover {position: absolute; right: 0; top: 50%; transform: translate(-2.8%, -60.5%); width: 785px; height: 380px; text-align: center;}
+#shopping ul li.top2 a div.hover p {display: none;}
+#shopping ul li.top2 a div.hover:hover {width: 785px; height: 380px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
+#shopping ul li.top2 a div.hover:hover p {display: block; position: relative; top: 45%; color: #ffffff; font-weight: 700;}
+#shopping ul li.top2 a div.detail {position: relative; left:0%; top: -100%; background: url(../img/02.png) left center no-repeat;}
+#shopping ul li.top2 a div.detail h4 {position: relative; top: 50%; left: 0;}
+#shopping ul li.top2 a div.detail p {position: relative; top: 80%; left: 0;}
+
+#shopping ul div.top {position: relative; top: 65%; left: 0; background-color: burlywood; }
+#shopping ul div.top div.top-inner {position: absolute;}
+#shopping ul div.top li {float: left;}
+#shopping ul div.top li + li {padding-left: 33px;}
+#shopping ul div.top li img { width: 370px; height: 310px;}
+#shopping ul div.top a div.hover {position: absolute; left: 0; top: 0; width: 370px; height: 310px; text-align: center;}
+#shopping ul div.top li + li a div.hover  {position: absolute; left: 403px; top: 0; width: 370px; height: 310px; text-align: center;}
+#shopping ul div.top li + li + li a div.hover  {position: absolute; left: 806px; top: 0; width: 370px; height: 310px; text-align: center;}
+#shopping ul div.top a div.hover p {display: none;}
+#shopping ul div.top a div.hover:hover {width: 370px; height: 310px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
+#shopping ul div.top a div.hover:hover p {display: block; position: relative; top: 45%; color: #ffffff; font-weight: 700;}
+#shopping ul div.top a div.detail h4 {position: relative; top: 50%; left: 0;}
+#shopping ul div.top a div.detail p {position: relative; top: 70%; left: 0;}
+#shopping ul div.top div.top-inner li:nth-child(1) a div.detail {position: absolute; background: url(../img/03.png) left center no-repeat;}
+#shopping ul div.top div.top-inner li:nth-child(2) a div.detail {position: absolute; background: url(../img/04.png) left center no-repeat;}
+#shopping ul div.top div.top-inner li:nth-child(3) a div.detail {position: absolute; background: url(../img/05.png) left center no-repeat;}
+
+
+
+#festival {position: relative; background-color: #f4f4f4; height: 740px;}
+#festival h3 {font-size: 34px; font-weight: 200; text-align: center; padding: 4% 0 2% 0; color: #222222; margin-bottom: 20px;}
+#festival ul {position: absolute; width: 1920px; height: 490px; overflow: hidden; left: 1%;}
+#festival ul li {float: left; width: 235px; height: 490px;}
+#festival ul li + li {padding-left: 38px;}
+#festival ul li a img {width: 235px; height: 354px; padding-bottom: 20px;}
+#festival ul li em {font-size: 20px;}
+#festival ul li p {font-size: 20px; width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 20px;}
+#festival ul li p + p {font-size: 15px;}
+#festival a img.prev {position: relative; left: 0.5%; top: 20%; width: 60px;}
+#festival a img.next {position: relative; right: -93%; top: 20%; width: 60px;}
+
+
+#hotplace {position: relative; width: 100%; height: 1500px;}
+#hotplace h3 {font-size: 34px; font-weight: 200; text-align: center; padding: 4% 0 1% 0; color: #222222; margin-bottom: 20px;}
+#hotplace div.content {position: relative; max-width: 100%; height: 100%;}
+
+#hotplace div.content div.map {position: absolute; width: 1200px; height: 600px; background: url(../img/intro/map.png) center center no-repeat; background-size: contain; left: 50%; top: 0; transform: translate(-50%, 0);}
+#hotplace div.content div.map > ul > li:nth-child(1) {position: absolute; left: 40%; top: 50%;}
+#hotplace div.content div.map > ul > li:nth-child(2) {position: absolute; left: 50%; top: 58%;}
+#hotplace div.content div.map > ul > li:nth-child(3) {position: absolute; left: 50%; top: 38%;}
+#hotplace div.content div.map > ul > li:nth-child(4) {position: absolute; left: 67%; top: 50%;}
+#hotplace div.content div.map > ul > li:nth-child(5) {position: absolute; left: 58%; top: 48%;}
+
+
+#hotplace div.content div.map > ul > li:hover {transform: scale(1.3); transition: all 0.3s;}
+#hotplace div.content div.map-info {position: absolute; width: 1200px; height: 350px; top: 600px; left: 50%; transform: translate(-50%, 0);}
+#hotplace div.content div.map-info > div.inner-box > ul {position: absolute; left: 50%; top: 0; transform: translate(-50%, 0);}
+#hotplace div.content div.map-info > div.inner-box > ul > li > h4 {font-size: 20px; color: #555555; font-weight: 200;}
+
+#hotplace div.content div.map-info > div.inner-box > ul > li {float: left;}
+#hotplace div.content div.map-info > div.inner-box > ul > li > h4 > a {display: block; padding: 10px 25px;}
+#hotplace div.content div.map-info > div.inner-box > ul > li > h4 > a.on {font-weight: 600; color: #000000; border-bottom: 4px solid #000000;}
+
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner {overflow: hidden;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner {position: absolute; top: 60px; width: 1200px; left: 50%; transform: translate(-50%, 0);}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li {float: left; width: 274px; height: 280px;;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li a {display: block;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li a div.hover {position: absolute; left: 0; top: 0; width: 274px; height: 180px; text-align: center;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li + li a div.hover {left: 307px;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li + li + li a div.hover {left: 615px;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li + li + li + li a div.hover {left: 925px;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li a div.hover p {display: none;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li a div:hover {width: 274px; height: 180px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
+#hotplace div.content div.map-info > div.inner-box  > ul li ul.inner li a div:hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
+
+
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li + li {margin-left: 34px;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li img {width: 100%; height: 180px;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li h5 {font-size: 25px; color: #333333; font-weight: 400; padding: 10px 0 10px 0;}
+#hotplace div.content div.map-info > div.inner-box > ul li ul.inner li p {overflow: hidden; text-overflow: ellipsis; display:-webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+
+#hotplace div.content div.map-info > div.inner-box >  ul > li:nth-child(2) > ul {display: none;}
+#hotplace div.content div.map-info > div.inner-box > ul > li:nth-child(3) > ul {display: none;}
+#hotplace div.content div.map-info > div.inner-box > ul > li:nth-child(4) > ul {display: none;}
+#hotplace div.content div.map-info > div.inner-box > ul > li:nth-child(5) > ul {display: none;}
+
+
+#hotplace div.more_info {position: absolute; width: 100%; height: 240px; z-index: 100; bottom: 50px; left: 0;}
+#hotplace div.more_info ul {position: absolute; width: 1200px; height: 100%; left: 50%; top: 0; transform: translate(-50%, 0); }
+#hotplace div.more_info ul li {float: left;}
+#hotplace div.more_info ul li:nth-child(2n) {padding-left: 25px;}
+#hotplace div.more_info ul li:nth-child(1) {padding-bottom: 25px;}
+#hotplace div.more_info ul li:nth-child(2) {padding-bottom: 25px;}
+#hotplace div.more_info ul li a img {width: 586px; height: 100px;}
+#hotplace div.more_info ul li a {position: relative;}
+#hotplace div.more_info ul li a h4 {height: 30px; width: 200px; position: absolute; font-size: 22px; color: #ffffff; left: 0%; top: 30%; transform: translate(0, -30%); font-weight: 400; padding-left: 25px;}
+#hotplace div.more_info ul li a > p {display: inline-block; position: absolute; right: 5%; top: 30%; transform: translate(0, -40%);   border: 1px solid #ffffff; background-color: #ffffff; font-size: 16px; padding: 6px 16px 6px 16px; box-sizing: border-box; }
+
+
+
+#tv {position: relative; width: 100%; height: 1250px; top: 0;}
+#tv h3 {font-size: 34px; font-weight: 200; text-align: center; padding: 4% 0 1% 0; color: #222222; margin-bottom: 20px;}
+#tv ul li a img.youtube {width: 582px;}
+#tv div.media {position: relative; width: 100%; height: 100%;}
+#tv div.media ul {position: absolute; width: 1200px; height: 1250px; overflow: hidden; left: 50%; top: 0; transform: translate(-50%, 0);}
+#tv div.media ul li {float: left;}
+#tv div.media ul li:nth-child(2n) {padding-left: 36px;}
+#tv div.media ul li:nth-child(3) {padding-top: 120px;}
+#tv div.media ul li:nth-child(4) {padding-top: 120px;}
+#tv div.media ul li a h4 {font-size: 25px; font-weight: 400; padding-top: 10px;}
+#tv div.img_detail {font-size: 20px; display: block; position: absolute; color: #333333; padding: 20px 0 20px 0;}
+#tv div.img_detail p:nth-child(1)::after {content: '|'; padding-left: 20px;  line-height: 10px;}
+#tv div.img_detail p {float: left; line-height: 15px;}
+#tv div.img_detail img {float: left; padding: 0 15px 0 30px; line-height: 25px;}
+
+
+#footer {position: relative; width: 100%; height: 450px; background-color: #525252;}
+#footer div.top-footer {display: block; height: 48px; background-color: #3e3e3e; color: #ffffff;}
+#footer div.top-footer > div.top-inner {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0);}
+#footer div.top-footer ul {position: absolute; width: 400px; height: 48px; font-size: 14px; font-weight: 100;}
+#footer div.top-footer ul.others {left: 0; top: 0; line-height: 48px;}
+#footer div.top-footer ul.others li {float: left; position: relative; } 
+#footer div.top-footer ul.others li + li::before {content: '|'; padding: 0 15px 0 15px;}
+#footer div.top-footer ul.sns {position: absolute; left: 100%; top: 0; transform: translate(-35%, 0); line-height: 48px;}
+#footer div.top-footer ul.sns li {width: 25px; float: left;}
+#footer div.top-footer ul.sns li + li {padding-left: 31px;}
+#footer div.top-footer ul.sns li:nth-child(1) {width: 10px; height: 21px;}
+#footer div.top-footer ul.sns li:nth-child(2) {width: 19px; height: 19px;}
+
+#footer div.main-footer {display: block; position: relative; height: 340px; background-color: #525252;}
+#footer div.main-footer ul.footer-middle {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-top: 40px;}
+#footer div.main-footer ul.footer-middle li {float: left;}
+#footer div.main-footer ul.footer-middle li.address {position: relative; width: 380px; height: 255px; left: 0%; top: 0;}
+#footer div.main-footer ul.footer-middle li.address address {position: relative; width: 100%; height: 150px;}
+#footer div.main-footer ul.footer-middle li.address address h4 {font-size: 18px; color: #ffffff; padding-bottom: 15px;}
+#footer div.main-footer ul.footer-middle li.address address a img {width: 167px; height: 31px; padding-right: 20px;}
+#footer div.main-footer ul.footer-middle li.address address p {margin-top: 20px; color: #ffffff;}
+
+
+
+#footer div.main-footer ul.footer-middle li.inquiry {position: relative; width: 175px; height: 255px; left: 16%; top: 0; padding-left: 30px;}
+#footer div.main-footer ul.footer-middle li.inquiry ul li {padding-bottom: 40px; color: #ffffff;}
+#footer div.main-footer ul.footer-middle li.inquiry ul li a.email {text-decoration: underline;}
+#footer div.main-footer ul.footer-middle li.inquiry a {position: relative;}
+#footer div.main-footer ul.footer-middle li.inquiry p {padding: 10px 0 5px 0;}
+
+#footer div.main-footer ul.footer-middle li.inquiry a h4 {font-size: 18px; color: #ffffff; display: inline-block;}
+#footer div.main-footer ul.footer-middle li.inquiry a img {width: 12px; left: 0; top: 5%; transform: translate(0, -40%);}
+#footer div.main-footer ul.footer-middle li.inquiry ul li:nth-child(3) p {font-size: 30px; font-weight: 700; color: #cbcbcb;}
+
+
+
+#footer div.main-footer ul.footer-middle li.mobile-app {position: relative; width: 205px; height: 255px; right: -34%; top: 0;}
+#footer div.main-footer ul.footer-middle li.mobile-app h4 {font-size: 18px; color: #ffffff; display: inline-block;}
+#footer div.main-footer ul.footer-middle li.mobile-app a img {height: 38px; margin-top: 10px;}
+
+
+#footer div.right {width: 205px; height: 255px;}
+
+
+
+#footer div.bottom-footer {position: relative; width: 100%; height: 71px; border-top: 1px solid #707070;}
+#footer div.bottom-footer div.inner {position: relative; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); height: 71px;}
+#footer div.bottom-footer p {padding-top: 20px; font-size: 14px; color: #ffffff; left: 0; top: 50%; transform: translate(0, 2%);}
+#footer div.bottom-footer ul {position: absolute; right: 0; top: 50%; transform: translate(0, -40%); }
+#footer div.bottom-footer ul li {position: relative; float: left; height: 71px; line-height: 45px;}
+
+#footer div.bottom-footer ul li:nth-child(1) {width: 60px; height: 43px;}
+#footer div.bottom-footer ul li:nth-child(2) {width: 25px; padding-left: 20px;}
+#footer div.bottom-footer ul li:nth-child(3) {width: 25px; padding-left: 20px;}
+
+
+
+.custom-scroll {overflow: auto;}
+.custom-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  transition: background-color 0.3s;
+}
+.custom-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: #e8e8e8;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+
+
+
+
+/* sub-에디터추천여행 */
+
+body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; color: #666666; background: #ffffff;}
+
+#sub_main-visual {position: relative; top: 90px;}
+#sub_main-visual > div {width: 1920px; height: 674px;}
+#sub_main-visual > div > img {width: 100%; height: 674px;}
+#sub_main-visual h2 {position: absolute; left: 20%; top: 50%; font-size: 58px; transform: translate(-5%, 30%); font-weight: 600; color: #ffffff; z-index: 10;}
+#sub_main-visual > div > div.black-bar {position: absolute; width: 100%; height: 40px; background-color: rgba(0, 0, 0, 0.7); left: 0; bottom: 0;}
+
+#post {position: relative; top: 90px; height: 1200px; width: 100%;}
+
+#post ul.top {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding: 25px 0; font-size: 16px;}
+#post ul.top li i {color: #000000; font-size: 18px; top: -2px;}
+#post ul.top li {float: left;}
+#post ul.top li + li::before {content: '>'; padding: 0 10px; }
+#post ul.top li h3 {position: absolute; left: 10%; top: 33%; font-size: 18px;}
+#post div.sub {position: absolute; top: 90px; left: 12%; transform: translate(0, 0);}
+#post div.sub ul li {position: relative; float: left; top: 10px; width: 80px;}
+#post div.sub ul li + li {margin-left: 15px;}
+#post div.sub ul li + li::before {content: '|';}
+#post div.sub ul li + li p {position: relative; margin-left: 15px; top: -17px;}
+
+#post div.search {position: absolute; width: 250px; height: 50px; left: 100%; top: 5%; transform: translate(260%, 0); text-align: right; font-weight: 100; }
+#post div.search a {box-sizing: border-box;}
+#post div.search a span {position: relative; top: 10px; font-size: 14px; border: 1px solid #767676; padding: 7px 20px 7px 20px; border-radius: 5px;}
+#post div.search a span.on {background-color: #137DC3; color: #ffffff;}
+
+
+#post div.search span i {top: -1px; margin-right: 5px; font-size: 14px;}
+#post div.search div.search-box {display: none;; position: absolute; width: 1200px; height: 178px; left: -381%; top: 50px; z-index: 100000; border: 1px solid #767676; background-color: #f6f6f6;}
+#post div.search div.search-box div.inner input {width: 600px; height: 30px; border: none; padding-left: 10px;}
+#post div.search div.search-box div.inner {width: 700px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#post div.search div.search-box div.inner span {position: relative; right: 0; top: 2px; margin-left: 15px; padding: 7px 20px 7px 20px; background-color: #555555; color: #ffffff;}
+
+#post div.post-list {position: relative; width: 1200px; height: 800px; top: 140px;left: 50%; transform: translate(-50%, 0); z-index: 0;}
+#post div.post-list > ul {position: absolute; top: 0;}
+#post div.post-list > ul > li {float: left; width: 285px; height: 350px;}
+#post div.post-list > ul > li + li {margin-left: 20px;}
+#post div.post-list > ul > li:nth-child(4n+1) {margin-left: 0;}
+
+#post div.post-list > ul > li > a > div.img img {width: 285px; height: 210px; border-radius: 5px;}
+#post div.post-list > ul > li > a > div.detail {position: relative; width: 265px; height: 170px; top: -30px; left: 0; margin-left: 10px; background-color: #ffffff; border-radius: 5px;}
+#post div.post-list > ul > li > a > div.detail:hover {top: -85px; transition: all 0.5s;}
+#post div.post-list > ul > li > a > div.detail:hover h4 {color: #137DC3;}
+
+#post div.post-list > ul > li > a > div.detail h4 {font-size: 17px; color: #000000; padding: 15px 0 10px 10px; width: 240px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+#post div.post-list > ul > li > a > div.detail p {padding: 0px 0 10px 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 240px; height: 28px;}
+
+#post div.post-list > ul > li > a > div.detail div {position: relative; width: 26px; height: 26px; margin: 30px 0 0 220px;  border: 1px solid #137DC3; border-radius: 100px; background-color: #137DC3;}
+#post div.post-list > ul > li > a > div.detail div > i {top: 3px; left: 7px; color: #ffffff;}
+
+#post ul.page-indicator {position: absolute; width: 1200px; height: 80px; left: 48%; top: 80%; transform: translate(-50%, 0);}
+
+#post ul.page-indicator li {float: left; position: relative; width: 38px; height: 38px; font-size: 14px; border-radius: 100px; left: 30%; top: 0;}
+#post ul.page-indicator li p {position: relative; top: 3px; left: 14px; font-size: 20px;}
+#post ul.page-indicator li.on { background-color: #666666; color: #ffffff;}
+#post ul.page-indicator li + li {margin-left: 25px;}
+#post ul.page-indicator li.prev {border: 1px solid #666;}
+#post ul.page-indicator li.next {border: 1px solid #666;}
+#post ul.page-indicator li.less i {top: 8px; left: 13px; font-size: 20px;}
+#post ul.page-indicator li.more i {top: 8px; left: 11px; font-size: 20px;}

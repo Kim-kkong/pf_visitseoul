@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 300;
+  src: url(../font/NanumSquareL.woff) format('woff'),
+       url(../font/NanumSquareL.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  src: url(../font/NanumSquareR.woff) format('woff'),
+       url(../font/NanumSquareR.ttf) format('truetype');
+}
+
+@font-face {
+font-family: 'NanumSquare';
+font-weight: 700;
+src: url(../font/NanumSquareB.woff) format('woff'),
+     url(../font/NanumSquareB.ttf) format('truetype');
+}
+
+@font-face {
+font-family: 'NanumSquare';
+font-weight: 800;
+src: url(../font/NanumSquareEB.woff) format('woff'),
+     url(../font/NanumSquareEB.ttf) format('truetype');
+}
+
