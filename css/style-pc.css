@@ -326,7 +326,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #tv div.img_detail img {float: left; padding: 0 15px 0 30px; line-height: 25px;}
 
 
-#footer {position: relative; width: 100%; height: 450px; background-color: #525252;}
+#footer {position: relative; width: 100%; height: 450px; background-color: #525252; bottom: 0;}
 #footer div.top-footer {display: block; height: 48px; background-color: #3e3e3e; color: #ffffff;}
 #footer div.top-footer > div.top-inner {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0);}
 #footer div.top-footer ul {position: absolute; width: 400px; height: 48px; font-size: 14px; font-weight: 100;}
@@ -468,3 +468,76 @@ body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-si
 #post ul.page-indicator li.next {border: 1px solid #666;}
 #post ul.page-indicator li.less i {top: 8px; left: 13px; font-size: 20px;}
 #post ul.page-indicator li.more i {top: 8px; left: 11px; font-size: 20px;}
+
+
+/* sub-에디터추천여행-새해 */
+body.newyear #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; color: #666666; background: #ffffff;}
+
+
+
+
+#sub-post {position: relative; top: 90px; height: 5400px; min-width: 770px;}
+
+#sub-post ul.top {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding: 25px 0; font-size: 16px;}
+#sub-post ul.top li i {color: #000000; font-size: 18px; top: -2px;}
+#sub-post ul.top li {float: left;}
+#sub-post ul.top li + li::before {content: '>'; padding: 0 10px; }
+#sub-post ul.top li h3 {position: absolute; left: 10%; top: 33%; font-size: 18px;}
+#article {position: relative; width: 1200px; left: 50%; top: 50px; transform: translate(-50%, 0 );}
+#article div.title {position: relative; height: 300px; width: 1000px; border-bottom: 1px solid #666666; left: 50%; top: 0; transform: translate(-50%, 0);}
+#article div.title h3 {position: absolute; left: 50%; top: 0; transform: translate(-50%, 0); font-size: 16px; color: #0066eb; display: block; margin-top: 120px;}
+#article div.title h4 {position: absolute; left: 50%; top: 0; transform: translate(-50%, 0); font-size: 36px; color: #333333; display: block; margin-top: 150px;}
+#article div.title ul {position: absolute; left: 50%; top: 220px; transform: translate(-50%, 0);}
+#article div.title ul li {float: left;}
+#article div.title ul li {margin-left: 10px;}
+#article div.title ul li a img {width: 35px; height: 35px;}
+#article div.title p {position: absolute; left: 50%; top: 290px; transform: translate(-50%, 0); background-color: #ffffff; padding: 0 10px;}
+
+
+
+#article div.sec1 {position: absolute; top: 400px; left: 50%; transform: translate(-50%, 0); width: 1000px;}
+#article div.sec1 > ul {position: absolute; left: 50%; top: 0; transform: translate(-50%, 0);}
+#article div.sec1 > ul > li > ul.inner > li {width: 775px; height: 100%; margin-bottom: 80px;}
+#article div.sec1 > ul > li > ul.inner > li:nth-child(3) {padding-top: 50px; border-top: 1px solid #c5c5c5;}
+#article div.sec1 > ul > li > ul.inner > li:nth-child(4) {padding-top: 50px; border-top: 1px solid #c5c5c5;}
+#article div.sec1 > ul > li > ul.inner > li:nth-child(5) {padding-top: 50px; border-top: 1px solid #c5c5c5;}
+
+
+#article div.sec1 > ul > li > ul.inner > li > img {position: relative; width: 775px; height: 100%; margin-bottom: 20px;}
+#article div.sec1 > ul > li > ul.inner > li > h4 {position: relative; text-align: center; font-size: 24px; color: #0087c6; display: block; margin-bottom: 30px;}
+#article div.sec1 > ul > li > ul.inner > li > p {font-size: 16px; color: #747474;}
+#article div.sec1 > ul > li > ul.inner > li > a > p.more-info {position: relative; padding: 10px 20px; border: 1px solid #188BD8; width: 100px; height: 20px; background-color: #188BD8; color:  #ffffff; text-align: center; line-height: 20px; border-radius: 22px; margin-top: 25px; left: 50%; top: 0; transform: translate(-50%, 0);}
+
+#article div.sec1 > div.linked_article {position: absolute; top: 4100px; width: 775px; height: 480px;  left: 50%; transform: translate( -50%, 0);}
+#article div.sec1 > div.linked_article h4 {font-size: 24px; color: #2b2b2b; padding: 20px 0; text-align: center;}
+#article div.sec1 > div.linked_article ul {position: absolute;}
+#article div.sec1 > div.linked_article > ul li {float: left; width: 383px; height: 308px; padding-top: 25px; box-shadow: 0 4px 8px -4px rgba(0,0,0,0.3);;}
+#article div.sec1 > div.linked_article > ul li img {width: 384px; height: 225px;}
+#article div.sec1 > div.linked_article > ul li h6 {font-size: 14px; color: #666666; padding: 15px 10px 0 10px;}
+#article div.sec1 > div.linked_article > ul li h5 {font-size: 16px; color: #666666; padding: 10px 10px 0 10px;}
+#article div.sec1 > div.linked_article > ul li + li {margin-left: 5px;}
+#article div.sec1 > div.linked_article > p {position: absolute; bottom: 0; font-size: 16px; color: #747474;}
+
+#sub-post > div.linked_tag {position: absolute; width: 90%; height: 100px; bottom: 1%; left: 50%; transform: translate(-50%, -50%); border-bottom: 1px solid #c5c5c5;}
+#sub-post > div.linked_tag h4 {font-size: 18px; color: #0066eb; padding-bottom: 15px;}
+#sub-post > div.linked_tag h4 img {width: 25px; height: 25px; padding-right: 3px;}
+#sub-post > div.linked_tag ul {}
+#sub-post > div.linked_tag ul li {float: left; font-size: 16px; color: #767676;}
+#sub-post > div.linked_tag ul li + li {padding-left: 15px;}
+
+
+#reply {position: relative; left: 0; top: 0; min-width: 770px; background-color: wheat; height: 1000px;}
+
+#reply div.inner-box {position: absolute; width: 90%; height: 900px; left: 50%; top: 0; transform: translate(-50%, 0); background-color: cadetblue;}
+#reply div.inner-box > ul {}
+
+#reply div.inner-box > ul li {width: 30px; height: 30px; }
+
+
+
+
+
+
+
+
+
