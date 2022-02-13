@@ -27,7 +27,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #skip-nav:focus {top: 0;}
 
 #wrapper > div.mobile-quick-menu {display: none;}
-#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000;}
+#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000; display: none;}
 #wrapper > div.quick-menu.on {position: fixed; right: 0.5px; top: 50%; transform: translate(0, -50%); z-index: 1000; box-shadow: 5px 3px 5px 0 rgba(2, 0, 5, 0.3), -5px -5px 5px 5px rgba(0, 0, 0, 0.2) inset;}
 
 #wrapper > div.quick-menu p {position: absolute; width: 151px; height: 40px; background-color: #4a4a4a; color: #ffffff; font-size: 16px; text-align: center; line-height: 40px; left: 0; top: 20%; transform: translate(-63%, -42%) rotate(270deg);}
@@ -518,7 +518,7 @@ body.newyear #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; fon
 #article div.sec1 > div.linked_article > ul li + li {margin-left: 5px;}
 #article div.sec1 > div.linked_article > p {position: absolute; bottom: 0; font-size: 16px; color: #747474;}
 
-#sub-post > div.linked_tag {position: absolute; width: 90%; height: 100px; bottom: 1%; left: 50%; transform: translate(-50%, -50%); border-bottom: 1px solid #c5c5c5;}
+#sub-post > div.linked_tag {position: absolute; width: 1200px; height: 100px; bottom: 1%; left: 50%; transform: translate(-50%, -50%); border-bottom: 1px solid #c5c5c5;}
 #sub-post > div.linked_tag h4 {font-size: 18px; color: #0066eb; padding-bottom: 15px;}
 #sub-post > div.linked_tag h4 img {width: 25px; height: 25px; padding-right: 3px;}
 #sub-post > div.linked_tag ul {}
@@ -526,18 +526,29 @@ body.newyear #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; fon
 #sub-post > div.linked_tag ul li + li {padding-left: 15px;}
 
 
-#reply {position: relative; left: 0; top: 0; min-width: 770px; background-color: wheat; height: 1000px;}
+#reply {position: relative; left: 0; top: 0; min-width: 770px; height: 400px;}
 
-#reply div.inner-box {position: absolute; width: 90%; height: 900px; left: 50%; top: 0; transform: translate(-50%, 0); background-color: cadetblue;}
-#reply div.inner-box > ul {}
+#reply div.inner-box {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-top: 50px;}
+#reply div.inner-box > ul {position: absolute;}
 
-#reply div.inner-box > ul li {width: 30px; height: 30px; }
+#reply div.inner-box > ul li {float: left; width: 30px; height: 30px; content: ''; display: inline-block; text-indent: -9999px;}
+#reply div.inner-box > ul li + li {margin-left: 10px;}
+#reply div.inner-box > ul li:nth-child(1) {background: url("../img/newyear/ico-box.png") -681px -184px no-repeat;}
+#reply div.inner-box > ul li:nth-child(2) {background: url("../img/newyear/ico-box.png") -650px -91px no-repeat;}
+#reply div.inner-box > ul li:nth-child(3) {background: url("../img/newyear/ico-box.png") -524px -176px no-repeat;}
+#reply div.inner-box > ul li:nth-child(4) {background: url("../img/newyear/ico-box.png") -454px -210px no-repeat;}
 
+#reply div.input_reply {position: absolute; top: 90px; width: 1198px; border: 1px solid #c5c5c5; }
+#reply div.input_reply input {width: 1180px; height: 50px; padding-left: 15px;  border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #cbcbcb;}
+#reply div.input_reply div.bottom_reply {width: 100px; height: 31px}
+#reply div.input_reply div.bottom_reply > ul {position: absolute; width: 100%;}
+#reply div.input_reply div.bottom_reply > ul li {float: left; font-size: 20px; color: #757575; line-height: 25px; padding-left: 15px;}
 
+#reply div.input_reply div.bottom_reply > ul li.warning {position: absolute; right: 100px;}
+#reply div.input_reply div.bottom_reply button {position: absolute; display: inline-block; height: 32px; width: 80px; right: 0; border: 2px solid #D60036; background-color: #D60036; color: #ffffff;}
 
-
-
-
+#reply p {position: absolute; top: 250px; text-align: center; width: 1200px; font-size: 14px; color: #757575;}
+#reply img {position: absolute; top: 200px; left: 50%; transform: translate(-50%, 0);}
 
 
 
