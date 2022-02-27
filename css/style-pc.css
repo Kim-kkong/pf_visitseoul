@@ -27,7 +27,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #skip-nav:focus {top: 0;}
 
 #wrapper > div.mobile-quick-menu {display: none;}
-#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000; display: none;}
+#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000;}
 #wrapper > div.quick-menu.on {position: fixed; right: 0.5px; top: 50%; transform: translate(0, -50%); z-index: 1000; box-shadow: 5px 3px 5px 0 rgba(2, 0, 5, 0.3), -5px -5px 5px 5px rgba(0, 0, 0, 0.2) inset;}
 
 #wrapper > div.quick-menu p {position: absolute; width: 151px; height: 40px; background-color: #4a4a4a; color: #ffffff; font-size: 16px; text-align: center; line-height: 40px; left: 0; top: 20%; transform: translate(-63%, -42%) rotate(270deg);}
@@ -138,11 +138,11 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #main-visual h2 {position: absolute; left: 30%; top: 35%; transform: translate(-50%, 50%); font-size: 14px; font-weight: 600; color: #ffffff; width: 420px; z-index: 100;}
 #main-visual h2 > em {font-size: 48px;}
 #main-visual div.slide-box {position: relative; width: 100%; height: 46vw; overflow: hidden;}
-#main-visual div.slide-box p.dummy {opacity: 0;}
-#main-visual div.image-box div.box ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-#main-visual div.slide-box div.box ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main-visual div.slide-box div.box p.dummy {opacity: 0;}
+#main-visual div.slide-box div.box ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main-visual div.slide-box div.box ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
 #main-visual div.slide-box div.box ul.slide > li:first-child {display: block;}
-#main-visual div.slide-box div.box ul.slide > li > img {width: 100%; height: 100%; display: block;}
+#main-visual div.slide-box div.box ul.slide > li > img {width: 100%; height: 100%;}
 
 #main-visual div.slide-box div.box div.indicator {position: absolute; left: 0; bottom: 5%; width: 100%; text-align: center;}
 #main-visual div.slide-box div.box div.indicator > ul {display: inline-block; vertical-align: middle; margin-right: 5px;}
@@ -150,7 +150,12 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #main-visual div.slide-box div.box div.indicator > ul > li > a {display: block; width: 8px; height: 8px; background-color: none; border: 2.4px solid #ffffff; overflow: hidden; text-indent: -9999px; border-radius: 100px; transition: all 0.3s;}
 #main-visual div.slide-box div.box div.indicator > ul > li.on a {width: 8px; background-color: #ffffff;}
 #main-visual div.slide-box div.box div.indicator > ul > li + li {margin-left: 15px;}
-#main-visual div.slide-box div.box div.indicator a.play {display: inline-block; width: 24px; height: 24px; border-radius: 100px; overflow: hidden; box-sizing: border-box; color: #ffffff; vertical-align: middle;}
+#main-visual div.slide-box div.box div.indicator a.play {display: inline-block; width: 24px; height: 24px; border-radius: 100px; overflow: hidden; box-sizing: border-box; color: #ffffff; position: absolute; top: 3px; margin-left: 15px;}
+#main-visual div.slide-box div.box div.indicator a.play i {display: none;}
+#main-visual div.slide-box div.box div.indicator a.play i:first-child {display: block;}
+#main-visual div.slide-box div.box div.indicator > a.play.on i:first-child {display: none;}
+#main-visual div.slide-box div.box div.indicator > a.play.on i + i {display: block;}
+
 #main-visual div.slide-box div.box p.control a {position: absolute; top: 50%; transform: translate(0, -50%); overflow: hidden; width: 50px; height: 100px; text-indent: -9999px;}
 #main-visual div.slide-box div.box p.control a::before {content:''; position: absolute; left: 50%; top: 50%; width: 80px; height: 80px; box-sizing: border-box; border: 2px solid #ffffff; transform: translate(-50%, -50%) rotate(45deg); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2), 2px 2px 5px 0 rgba(0, 0, 0, 0.2) inset;}
 #main-visual div.slide-box div.box p.control a.prev {left: 50px;}

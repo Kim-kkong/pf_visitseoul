@@ -396,25 +396,24 @@
             <em>See You in SEOUL</em>서울에서 만나요
           </h2>
           <div class="slide-box">
-            <p class="dummy"><img alt="" src="img/intro/getImage (23).png">
+            
             <div class="box">
+              <p class="dummy"><img alt="" src="img/intro/getImage (23).png" />
               <ul class="slide">
                 <li>
-                  <img alt="00" src="img/intro/getImage (23).png">
+                  <img alt="00" src="img/intro/getImage (23).png" />
                 </li>
                 <li>
-                  <img alt="00" src="img/intro/getImage (24).png">
+                  <img alt="00" src="img/intro/getImage (24).png" />
                 </li>
                 <li>
-                  <img alt="00" src="img/intro/getImage (25).png">
+                  <img alt="00" src="img/intro/getImage (25).png" />
                 </li>
               </ul>
 
               <div class="indicator">
-                <ul>
-                  <li class="on"><a href="#">1번 슬라이드</a></li>
-                  <li><a href="#">2번 슬라이드</a></li>
-                  <li><a href="#">3번 슬라이드</a></li>
+                <ul class="indicator-inner">
+                  
                 </ul>
                 <a href="#" class="play">
                   <i class="fas fa-pause"><span>정지</span></i>
@@ -1075,7 +1074,129 @@
       </footer>
     </div>
     <script>
-      'use strict';
+    'use strict';
+
+    var numSlide = $('div.box .slide > li').length;
+    var slideNow = 0;
+    var slideNext = 0;
+    var slidePrev = 0;
+    var slideFirst = 1;
+    var timerId = '';
+    var timerSpeed = 2000;
+    var isTimerOn = true;
+
+    $('div.box .slide > li').each(function(i) {
+      $(this).css({'left': (i * 100) + '%', 'display': 'block'});
+      $('div.box .indicator-inner').append('<li><a href="#">' + ( i + 1 ) + '번 슬라이드</a></li>\n');
+    });
+
+    if (isTimerOn === true) {
+      $('div.box .indicator > a.play').addClass('on');
+    } else {
+      $('div.box .indicator > a.play').removeClass('on');
+    }
+
+    showSlide(slideFirst);
+
+    $('div.box .indicator-inner li a').on('click', function() {
+      var index = $('div.box .indicator-inner li').index($(this).parent());
+      showSlide(index + 1);
+    });
+
+    $('div.box .control a.prev').on('click', function() {
+
+      showSlide(slidePrev);    
+      
+      });
+
+    $('div.box .control a.next').on('click', function() {
+
+      showSlide(slideNext);    
+    
+    });
+
+    $('div.box .indicator a.play').on('click', function() {
+      if (isTimerOn === true) {
+        stopTimer();
+      } else {
+        startTimer();
+      }
+    });
+
+    function startTimer() {
+      timerId = seTimeout(function() {showSlide(slideNext);}, timerSpeed);
+      $('div.box .indicator a.play').addClass('on');
+      isTimeron = true;
+    }
+
+    function stopTimer() {
+      clearTimeout(timerId);
+      $('div.box .indicator a.play').removeClass('on');
+      isTimerOn = false;
+    }
+
+    function resetTimer() {
+      clearTimeout(timerId);
+      if (isTimerOn === true) {
+        timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
+      }
+    }
+
+    function showSlide(n) {
+      resetTimer();
+      $('div.box .slide').css({'transition': 'left 0.3s', 'left': (-(n - 1) * 100) + '%'});
+      $('div.box .indicator-inner li').removeClass('on');
+      $('div.box .indicator-inner li:eq('+ (n - 1) +')').addClass('on');
+
+      slideNow = n;
+      slidePrev = (n === 1) ? numSlide : (n - 1);
+      slideNext = (n === numSlide) ? 1 : (n + 1);
+
+      //console.log(slidePrev + ' / ' + slideNow + ' / ' + slideNext);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
 
