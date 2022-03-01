@@ -158,7 +158,7 @@
               </ul>
             </div>
 
-            <ul>
+            <ul class="pc-gnb">
               <li>
                 <a href="#">지금의 서울<i class="fas fa-chevron-down"></i></a>
                 <div class="sub">
@@ -188,7 +188,7 @@
                   </div>
                   <div class="inner">
                     <ul>
-                      <li><a href="#">에디터 추천 여행</a></li>
+                      <li><a href="page/editors_pick.html">에디터 추천 여행</a></li>
                       <li><a href="#">서울관광 추천 테마코스</a></li>
                       <li><a href="#">서울도보해설관광</a></li>
                       <li><a href="#">한류관광</a></li>
@@ -532,23 +532,29 @@
         </section>
 
         <section id="banner">
-          <ul>
-            <li>
-              <a href="#"><img alt="detail" src="img/intro/getImage.png"></a>
-            </li>
-            <li>
-              <a href="#"><img alt="detail" src="img/intro/getImage (1).png"></a>
-            </li>
-            <li>
-              <a href="#"><img alt="detail" src="img/intro/getImage (2).png"></a>
-            </li>
-            <li>
-              <a href="#"><img alt="detail" src="img/intro/getImage (3).png"></a>
-            </li>
-          </ul>
-          <a href="#"><img alt="detail" src="img/prev-icon.png" class="prev"></a>
-          <a href="#"><img alt="detail" src="img/next-icon.png" class="next"></a>
-
+          <div class="slide-box">
+            <div class="box">
+              <p class="dummy"><img alt="" src="img/intro/banner01.png" /></p>
+              <ul class="slide">
+                <li>
+                  <a href="#"><img alt="detail" src="img/intro/banner01.png"></a>
+                </li>
+                <li>
+                  <a href="#"><img alt="detail" src="img/intro/banner02.png"></a>
+                </li>
+                <li>
+                  <a href="#"><img alt="detail" src="img/intro/banner03.png"></a>
+                </li>
+                <li>
+                  <a href="#"><img alt="detail" src="img/intro/banner04.png"></a>
+                </li>
+              </ul>
+            </div>
+            <p class="control">
+              <a href="#"><img alt="이전" src="img/prev-icon.png" class="prev"></a>
+              <a href="#"><img alt="다음" src="img/next-icon.png" class="next"></a>
+            </p> 
+          </div>
         </section>
         
         <section id="shopping">
@@ -1076,6 +1082,7 @@
     <script>
     'use strict';
 
+      
     var numSlide = $('div.box .slide > li').length;
     var slideNow = 0;
     var slideNext = 0;
@@ -1083,7 +1090,7 @@
     var slideFirst = 1;
     var timerId = '';
     var timerSpeed = 2000;
-    var isTimerOn = true;
+    var isTimerOn = false;
 
     $('div.box .slide > li').each(function(i) {
       $(this).css({'left': (i * 100) + '%', 'display': 'block'});
@@ -1124,14 +1131,14 @@
     });
 
     function startTimer() {
-      timerId = seTimeout(function() {showSlide(slideNext);}, timerSpeed);
-      $('div.box .indicator a.play').addClass('on');
-      isTimeron = true;
+      timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
+      $('div.box .indicator > a.play').addClass('on');
+      isTimerOn = true;
     }
 
     function stopTimer() {
       clearTimeout(timerId);
-      $('div.box .indicator a.play').removeClass('on');
+      $('div.box .indicator > a.play').removeClass('on');
       isTimerOn = false;
     }
 
@@ -1174,17 +1181,84 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//헤더
+$('#gnb > ul.pc-gnb > li:eq(0) > a').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(0)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(0) > a').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(0)').removeClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(0) > div.sub').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(0)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(0) > div.sub').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(0)').removeClass('open');
+  });
+  
+  
+  
+  
+  $('#gnb > ul.pc-gnb > li:eq(1) > a').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(1)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(1) > a').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(1)').removeClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(1) > div.sub').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(1)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(1) > div.sub').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(1)').removeClass('open');
+  });
+  
+  
+  
+  
+  $('#gnb > ul.pc-gnb > li:eq(2) > a').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(2)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(2) > a').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(2)').removeClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(2) > div.sub').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(2)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(2) > div.sub').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(2)').removeClass('open');
+  });
+  
+  
+  
+  
+  $('#gnb > ul.pc-gnb > li:eq(3) > a').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(3)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(3) > a').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(3)').removeClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(3) > div.sub').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(3)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(3) > div.sub').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(3)').removeClass('open');
+  });
+  
+  
+  
+  
+  $('#gnb > ul.pc-gnb > li:eq(4) > a').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(4)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(4) > a').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(4)').removeClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(4) > div.sub').on('mouseenter', function() {
+  $('#gnb > ul.pc-gnb > li:eq(4)').addClass('open');
+  });
+  $('#gnb > ul.pc-gnb > li:eq(4) > div.sub').on('mouseleave', function() {
+  $('#gnb > ul.pc-gnb > li:eq(4)').removeClass('open');
+  });
+  
 
 
 

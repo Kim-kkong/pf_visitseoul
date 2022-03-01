@@ -94,31 +94,34 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #gnb > ul > li div.sub > div.content > div.inner > ul > li {position: relative; width: 100%; height: 60px; line-height: 65px; border-bottom: 1px solid #333333;}
 
 /* main */
-#main {padding-top: 0;}
+#main {position: relative; top: 0; left: 0;}
 #main-visual {position: relative;}
-#main-visual h2 {position: absolute; left: 50%; top: 40%; transform: translate(-50%, 50%); font-size: 24px; font-weight: 600; color: #ffffff; width: 280px; z-index: 10;}
+#main-visual h2 {position: absolute; left: 50%; top: 40%; transform: translate(-50%, 50%); font-size: 24px; font-weight: 600; color: #ffffff; width: 280px; z-index: 100;}
 #main-visual h2 > em {font-size: 32px; font-weight: 900;}
 #main-visual div.slide-box {position: relative; width: 100%; height: 85vw; overflow: hidden;}
-#main-visual div.slide-box p.dummy {opacity: 0;}
-#main-visual div.image-box div.box ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-#main-visual div.slide-box div.box ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main-visual div.slide-box div.box p.dummy {opacity: 0;}
+#main-visual div.slide-box div.box ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#main-visual div.slide-box div.box ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
 #main-visual div.slide-box div.box ul.slide > li:first-child {display: block;}
-#main-visual div.slide-box div.box ul.slide > li > img {height: 100%; max-width: 770px; }
-
+#main-visual div.slide-box div.box ul.slide > li > img {max-width: 770px; height: 100%;}
 #main-visual div.slide-box div.box div.indicator {position: absolute; left: 0; bottom: 5%; width: 100%; text-align: center;}
 #main-visual div.slide-box div.box div.indicator > ul {display: inline-block; vertical-align: middle; margin-right: 5px;}
 #main-visual div.slide-box div.box div.indicator > ul > li {float: left;} 
 #main-visual div.slide-box div.box div.indicator > ul > li > a {display: block; width: 8px; height: 8px; background-color: none; border: 2.4px solid #ffffff; overflow: hidden; text-indent: -9999px; border-radius: 100px; transition: all 0.3s;}
 #main-visual div.slide-box div.box div.indicator > ul > li.on a {width: 8px; background-color: #ffffff;}
 #main-visual div.slide-box div.box div.indicator > ul > li + li {margin-left: 15px;}
-#main-visual div.slide-box div.box div.indicator a.play {display: inline-block; width: 24px; height: 24px; border-radius: 100px; overflow: hidden; box-sizing: border-box; color: #ffffff; top: 10px; transform: translate(0, 10%);}
-#main-visual div.slide-box div.box div.indicator a.play > i {top: 8px;}
+#main-visual div.slide-box div.box div.indicator a.play {display: inline-block; width: 24px; height: 24px; border-radius: 100px; overflow: hidden; box-sizing: border-box; color: #ffffff; position: absolute; top: 3px; margin-left: 15px;}
+#main-visual div.slide-box div.box div.indicator a.play i {display: block;}
+#main-visual div.slide-box div.box div.indicator a.play i:first-child {display: none;}
+#main-visual div.slide-box div.box div.indicator > a.play.on i:first-child {display: block;}
+#main-visual div.slide-box div.box div.indicator > a.play.on i + i {display: none;}
 #main-visual div.slide-box div.box p.control a {position: absolute; top: 55%; transform: translate(0, -50%); overflow: hidden; width: 50px; height: 100px; text-indent: -9999px;}
-#main-visual div.slide-box div.box p.control a::before {content:''; position: absolute; left: 50%; top: 50%; width: 65px; height: 65px; box-sizing: border-box; border: 2px solid #ffffff; transform: translate(-50%, -50%) rotate(45deg); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2), 2px 2px 5px 0 rgba(0, 0, 0, 0.2) inset;}
+#main-visual div.slide-box div.box p.control a::before {content:''; position: absolute; left: 50%; top: 50%; width: 60px; height: 60px; box-sizing: border-box; border: 2px solid #ffffff; transform: translate(-50%, -50%) rotate(45deg); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2), 2px 2px 5px 0 rgba(0, 0, 0, 0.2) inset;}
 #main-visual div.slide-box div.box p.control a.prev {left: 0;}
 #main-visual div.slide-box div.box p.control a.prev::before {left: calc(50% + 50px);}
 #main-visual div.slide-box div.box p.control a.next {right: 0;}
 #main-visual div.slide-box div.box p.control a.next::before {left: calc(50% - 50px);}
+
 
 #season {background-color: #ffffff;}
 #season {left: 0; top: 0; position: relative; height: 730px;}

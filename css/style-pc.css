@@ -27,7 +27,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #skip-nav:focus {top: 0;}
 
 #wrapper > div.mobile-quick-menu {display: none;}
-#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000;}
+#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000; display: none;}
 #wrapper > div.quick-menu.on {position: fixed; right: 0.5px; top: 50%; transform: translate(0, -50%); z-index: 1000; box-shadow: 5px 3px 5px 0 rgba(2, 0, 5, 0.3), -5px -5px 5px 5px rgba(0, 0, 0, 0.2) inset;}
 
 #wrapper > div.quick-menu p {position: absolute; width: 151px; height: 40px; background-color: #4a4a4a; color: #ffffff; font-size: 16px; text-align: center; line-height: 40px; left: 0; top: 20%; transform: translate(-63%, -42%) rotate(270deg);}
@@ -63,13 +63,12 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 
 #gnb > ul > li > a {display: block; padding: 10px 25px 23px 25px; font-size: 20px;}
 #gnb > ul > li > a > i {display: none;}
-#gnb > ul > li.open > a,
+#gnb > ul > li.open > a {border-bottom: 5px solid #137DC3;}
 #gnb > ul > li > a:hover {border-bottom: 5px solid #137DC3; transition: all 0.1s;}
 
-#gnb > ul > li > div.sub {display: none;}
+#gnb > ul > li > div.sub {position: absolute; left: 50%; top: 65px; transform: translate(-50%, 0); width: 100vw; color: #000000; background-color: #ffffff; height: 60vh; z-index: 1000; display: none;}
+#gnb > ul > li.open > div.sub {position: absolute; left: 50%; top: 65px; transform: translate(-50%, 0); width: 100vw; color: #000000; background-color: #ffffff; height: 60vh; z-index: 1000; display: block;}
 
-
-#gnb > ul > li > div.sub {position: fixed; left: 0; top: 90px; width: 100%; color: #000000; background-color: #ffffff; height: 60vh; z-index: 1000;}
 #gnb > ul > li > div.sub > div.content {position: relative; width: 1000px; height: 500px; left: 50%; top: 10%; transform: translate(-50%, 0);}
 
 #gnb > ul > li > div.sub > div.content > div.title {width: 250px; height: 100%;}
@@ -144,6 +143,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #main-visual div.slide-box div.box ul.slide > li:first-child {display: block;}
 #main-visual div.slide-box div.box ul.slide > li > img {width: 100%; height: 100%;}
 
+
 #main-visual div.slide-box div.box div.indicator {position: absolute; left: 0; bottom: 5%; width: 100%; text-align: center;}
 #main-visual div.slide-box div.box div.indicator > ul {display: inline-block; vertical-align: middle; margin-right: 5px;}
 #main-visual div.slide-box div.box div.indicator > ul > li {float: left;} 
@@ -151,10 +151,10 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #main-visual div.slide-box div.box div.indicator > ul > li.on a {width: 8px; background-color: #ffffff;}
 #main-visual div.slide-box div.box div.indicator > ul > li + li {margin-left: 15px;}
 #main-visual div.slide-box div.box div.indicator a.play {display: inline-block; width: 24px; height: 24px; border-radius: 100px; overflow: hidden; box-sizing: border-box; color: #ffffff; position: absolute; top: 3px; margin-left: 15px;}
-#main-visual div.slide-box div.box div.indicator a.play i {display: none;}
-#main-visual div.slide-box div.box div.indicator a.play i:first-child {display: block;}
-#main-visual div.slide-box div.box div.indicator > a.play.on i:first-child {display: none;}
-#main-visual div.slide-box div.box div.indicator > a.play.on i + i {display: block;}
+#main-visual div.slide-box div.box div.indicator a.play i {display: block;}
+#main-visual div.slide-box div.box div.indicator a.play i:first-child {display: none;}
+#main-visual div.slide-box div.box div.indicator > a.play.on i:first-child {display: block;}
+#main-visual div.slide-box div.box div.indicator > a.play.on i + i {display: none;}
 
 #main-visual div.slide-box div.box p.control a {position: absolute; top: 50%; transform: translate(0, -50%); overflow: hidden; width: 50px; height: 100px; text-indent: -9999px;}
 #main-visual div.slide-box div.box p.control a::before {content:''; position: absolute; left: 50%; top: 50%; width: 80px; height: 80px; box-sizing: border-box; border: 2px solid #ffffff; transform: translate(-50%, -50%) rotate(45deg); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2), 2px 2px 5px 0 rgba(0, 0, 0, 0.2) inset;}
@@ -189,11 +189,21 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #season div.inner-box ul:nth-child(3) {display: none;}
 
 
-#banner {position: relative; width: 100%; height: 235px; top: 50px;}
-#banner ul {position: absolute; width: 100%; height: 100%; left: 0; top: 0; padding-bottom: 30px;}
-#banner ul li {position: absolute; width: 1200px; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -30%);}
-#banner a img.prev {position: absolute; left: 9%; top: 150px; width: 60px;}
-#banner a img.next {position: absolute; right: 9%; top: 150px; width: 60px;}
+#banner {position: relative; width: 100%; height: 260px; top: 50px; padding: 20px 0;}
+#banner div.slide-box {position: relative; width: 1200px; height: 260px; left: 50%; top: 0; transform: translate(-50%, 0);}
+#banner div.slide-box > div.box {position: relative; overflow: hidden;}
+#banner div.slide-box > div.box img {width: 1200px; height: 260px;}
+#banner div.slide-box > div.box p.dummy {opacity: 0;}
+#banner div.slide-box > div.box > ul.slide {position: absolute; left: 0; top: 0; width: 1200px; height: 100%;}
+#banner div.slide-box > div.box > ul.slide > li {left: 0; top: 0; width: 100%; height: 100%; display: none;}
+#banner div.slide-box > div.box > ul.slide > li:first-child {display: none;}
+
+#banner div.slide-box > div.box > ul.slide > li:nth-child(3){display: block;}
+
+#banner div.slide-box p.control {position: absolute; width: 1270px; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#banner div.slide-box p.control a img.prev {left: 0;}
+#banner div.slide-box p.control a img.next {position: absolute; right: 0px;}
+
 
 
 #shopping {position: relative; height: 1700px; width: 100%; left: 0; top: 200px;}
