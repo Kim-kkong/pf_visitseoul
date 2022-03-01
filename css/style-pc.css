@@ -161,43 +161,24 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #season ul.title li + li {margin-left: 30px;}
 #season ul.title > li.on > a,
 #season ul.title > li > a:hover {text-decoration: underline; font-weight: 700; color: #222222;}
-#season ul.title li div.inner-box {position: absolute; width: 1200px; height: 400px; left: -80%; top: 100px;}
-#season ul.title li div.inner-box ul {position: absolute; left: 0; top: 0; width: 100%; height: 380px; padding-bottom: 30px;}
+#season ul.title li div.inner-box {position: absolute; width: 1200px; height: 400px; left: -80%; top: 100px;} 
+#season ul.title li div.inner-box ul {position: absolute; left: 0; top: 0; width: 100%; height: 380px; padding-bottom: 30px; background-color: #ffffff; display: none;}
+#season ul.title li div.inner-box.on ul {display: block;}
 #season ul.title li div.inner-box ul li {float: left; width: 380px;}
 #season ul.title li div.inner-box ul li img {width: 100%; height: 277px;}
 #season ul.title li div.inner-box ul li + li {margin-left: 25px;}
-#season ul.title li div.inner-box ul li a div.hover {position: absolute; left: 0; top: 0; width: 380px; height: 277px; text-align: center; z-index: 1000000; background-color: #000000; opacity: 0.3; display: none;}
-#season ul.title li div.inner-box ul li:nth-child(2) a div.hover {left: 405px;}
-#season ul.title li div.inner-box ul li:nth-child(3) a div.hover {left: 810px;}
-#season ul.title li div.inner-box ul li a div.hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
+#season ul.title li div.inner-box ul li > a div.hover {position: absolute; left: 0; top: 0; width: 380px; height: 277px; text-align: center; z-index: 1000000; background-color: #000000; opacity: 0.7; opacity: 0;}
+#season ul.title li div.inner-box ul li:nth-child(2) > a div.hover {left: 405px;}
+#season ul.title li div.inner-box ul li:nth-child(3) > a div.hover {left: 810px;}
+#season ul.title li div.inner-box ul li:nth-child(2):hover > a div.hover {left: 405px;}
+#season ul.title li div.inner-box ul li:nth-child(3):hover > a div.hover {left: 810px;}
 
-#season ul.title li div.inner-box ul li:hover a div.hover {position: absolute; left: 0; top: 0; width: 380px; height: 277px; text-align: center; z-index: 1000000; background-color: #000000; opacity: 0.5; display: block;}
-#season ul.title li div.inner-box ul li:nth-child(2):hover a div.hover {left: 405px;}
-#season ul.title li div.inner-box ul li:nth-child(3):hover a div.hover {left: 810px;}
-#season ul.title li div.inner-box ul li a div.hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
+#season ul.title li div.inner-box ul li a div.hover p {position: relative; top: 47%; left: 37%;  color: #ffffff; font-weight: 700; display:  none;} 
+#season ul.title li div.inner-box ul li:hover a div.hover {position: absolute; left: 0; top: 0; width: 380px; height: 277px; text-align: center; z-index: 1000000; background-color: #000000; opacity: 0.7; display: block;}
+#season ul.title li div.inner-box ul li:hover a div.hover p {position: relative; top: 47%; left: 37%;  color: #ffffff; font-weight: 700; display: block;} 
+
 #season ul.title li div.inner-box ul li a h5 {padding: 10px 0; font-size: 25px; font-weight: 600; color: #333333; text-align: left;}
 #season ul.title li div.inner-box ul li a p {font-size: 16px; color: #000000; text-align: left; }
-#season ul.title li:nth-child(2) div.inner-box ul {display: none;}
-#season ul.title li:nth-child(3) div.inner-box ul {display: none;}
-
-/*
-#season ul.title li div.inner-box ul.on {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-bottom: 30px; display: block;}
-#season ul.title li div.inner-box ul {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-bottom: 30px; display: none;}
-
-#season ul.title li div.inner-box ul li {float: left; left: 0; top: 0; padding-top: 20px;}
-#season ul.title li div.inner-box ul li + li {padding-left: 20px;}
-#season ul.title li div.inner-box ul li a img {width: 380px; height: 277px;}
-#season ul.title li div.inner-box ul li a div.hover {position: absolute; left: 0; top: 20px; width: 380px; height: 277px; text-align: center;}
-
-#season ul.title li div.inner-box ul li + li a div.hover {position: absolute; left: 400px; top: 20px; width: 380px; height: 277px; text-align: center;}
-#season ul.title li div.inner-box ul li + li + li a div.hover {position: absolute; left: 800px; top: 20px; width: 380px; height: 277px; text-align: center;}
-#season ul.title li div.inner-box ul li a div.hover p {display: none;}
-#season ul.title li div.inner-box ul li a div:hover {width: 380px; height: 277px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
-#season ul.title li div.inner-box ul li a div:hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
-#season ul.title li div.inner-box ul li a h5 {padding: 10px 0; font-size: 22px; font-weight: 500; color: #333333;}
-#season ul.title li div.inner-box ul li a p {font-size: 14px; color: #000000;}
-
-*/
 
 
 #banner {position: relative; width: 100%; height: 260px; top: 50px; padding: 20px 0;}
@@ -208,9 +189,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #banner div.slide-box > div.box > ul.slide {position: absolute; left: 0; top: 0; width: 1200px; height: 100%;}
 #banner div.slide-box > div.box > ul.slide > li {left: 0; top: 0; width: 100%; height: 100%; display: none;}
 #banner div.slide-box > div.box > ul.slide > li:first-child {display: none;}
-
 #banner div.slide-box > div.box > ul.slide > li:nth-child(3){display: block;}
-
 #banner div.slide-box p.control {position: absolute; width: 1270px; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 #banner div.slide-box p.control a img.prev {left: 0;}
 #banner div.slide-box p.control a img.next {position: absolute; right: 0px;}
