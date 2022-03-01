@@ -27,11 +27,12 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #skip-nav:focus {top: 0;}
 
 #wrapper > div.mobile-quick-menu {display: none;}
-#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000; display: none;}
+#wrapper > div.quick-menu {position: fixed; right: 0; top: 50%; transform: translate(100%, -50%); z-index: 10000;}
 #wrapper > div.quick-menu.on {position: fixed; right: 0.5px; top: 50%; transform: translate(0, -50%); z-index: 1000; box-shadow: 5px 3px 5px 0 rgba(2, 0, 5, 0.3), -5px -5px 5px 5px rgba(0, 0, 0, 0.2) inset;}
 
 #wrapper > div.quick-menu p {position: absolute; width: 151px; height: 40px; background-color: #4a4a4a; color: #ffffff; font-size: 16px; text-align: center; line-height: 40px; left: 0; top: 20%; transform: translate(-63%, -42%) rotate(270deg);}
-#wrapper > div.quick-menu p span {position: relative; top: 17%; padding-left: 6px;}
+#wrapper > div.quick-menu p span {position: relative; top: 17%; padding-right: 6px; transform: rotate(180deg);}
+#wrapper > div.quick-menu.on p span {position: relative; top: 17%; padding-left: 6px; transform: rotate(0);}
 #wrapper > div.quick-menu ul {width: 110px; height: 360px; background-color: #ffffff;}
 #wrapper > div.quick-menu ul li {position: relative; width:100%; height: 89px; border: 1px solid #e2e2e2;}
 #wrapper > div.quick-menu ul li + li {border-top: none;}
@@ -79,14 +80,6 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #gnb > ul > li > div.sub > div.content > div.inner > ul > li:hover {color: #137DC3; transition: all 0.3s;}
 #gnb > ul > li > div.sub > div.content > div.inner > ul > li + li {padding-top: 20px;}
 
-/* #gnb div.sub div.content-box { margin: 0 auto;}
-#gnb div.sub > div.top > div > ul {overflow: hidden;}
-#gnb div.sub > div.top > div > ul > li {float: left; width: 20%; margin-bottom: 20px;}
-#gnb div.sub > div.top > div > ul > li:nth-child(5n + 1) {clear: left;}
-#gnb div.sub > div.top > div > ul > li > a {font-size: 14px; font-weight: 700; color: #ffffff;}
-
-#gnb div.sub > div.top > div > ul > li > ul {margin-top: 15px;}
-#gnb div.sub > div.top > div > ul > li > ul > li + li {margin-top: 6px;} */
 
 #side-menu {position: absolute; width: 100%; height: 90px; right: 70px; top: 0;}
 #side-menu li {float: left; position: relative; left: 80%; top: 28px; height: 30px;}
@@ -97,18 +90,12 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #side-menu li img {width: 18px; padding: 10px;}
 #side-menu li div {position: relative; top: 5px;}
 #side-menu li div a p {position: absolute; top: 65%; transform: translate(50%, -10%); overflow: hidden; width: 110px; height: 10px; text-indent: -9999px;}
-
-
-#side-menu li div.search {display: none;}
-#side-menu li div.familysite {display: none;}
-#side-menu li div.language {display: none;}
-
-#side-menu li div.search {position: absolute; width: 487px; height: 436px; left: -400px; top: 60px; background-color: #ffffff;}
+#side-menu li div.search {position: absolute; width: 487px; height: 436px; left: -400px; top: 60px; background-color: #ffffff; display: none;}
+#side-menu li.open div.search {position: absolute; width: 487px; height: 436px; left: -400px; top: 60px; background-color: #ffffff; display: block; }
 #side-menu li div.search div.search-box {position: relative; left: 50%; top: 25px; width: 450px; height: 40px; transform: translate(-50%, 0); font-size: 18; border: none; border-bottom: 1px solid #666666;}
 #side-menu li div.search div.search-box input {position: relative; width: 395px; height: 33px; border: none; font-size: 20px; top: 4px;}
 #side-menu li div.search ol {position: absolute; width: 435px; height: 297px; top: 10%; left: 50%; transform: translate(-50%, 20%);}
 #side-menu li div.search ol h4 {font-weight: 800; color: #000000;}
-
 #side-menu li div.search ol div.list-1 {position: absolute; width: 200px; height: 290px;}
 #side-menu li div.search ol div.list-2 {position: absolute; width: 200px; height: 290px; right: 0}
 #side-menu li div.search ol div.list-1 li {position: relative; left: 0; top: 20px; width: 180px; margin: 20px 0 0 10px; }
@@ -119,13 +106,16 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #side-menu li div.search > a {width: 487px; height: 35px; border: 1px solid #cbcbcb; position: absolute; left: -2px; bottom: 0; background-color: #ededed;}
 #side-menu li div.search > a > img {position: absolute; right: 0; }
 
-
-#side-menu li div.familysite {position: absolute; background-color: #ffffff; width: 220px; height: 300px; left: 0; top: 50px; border: 1px solid #cbcbcb; }
+#side-menu li div.familysite {position: absolute; background-color: #ffffff; width: 220px; height: 300px; left: 0; top: 50px; border: 1px solid #cbcbcb; display: none;}
+#side-menu li.open div.familysite {position: absolute; background-color: #ffffff; width: 220px; height: 300px; left: 0; top: 50px; border: 1px solid #cbcbcb; display: block;}
+#side-menu li.open div.title > a > span {transform: rotate(180deg);} 
 #side-menu li div.familysite ul li {position: relative; left: 12px; top: 12px; width: 190px; padding: 2px; font-size: 16px; font-weight: 500; background-color: #f6f6f6;  line-height: 30px;}
 #side-menu li div.familysite ul li a {padding-left: 8px;}
 #side-menu li div.familysite ul li + li {margin-top: 6px;}
 
-#side-menu li div.language {position: absolute; background-color: #ffffff; width: 220px; height: 300px; right: 0; top: 50px; border: 1px solid #cbcbcb; }
+#side-menu li div.language {position: absolute; background-color: #ffffff; width: 220px; height: 300px; right: 0; top: 50px; border: 1px solid #cbcbcb; display: none;}
+#side-menu li.open div.language {position: absolute; background-color: #ffffff; width: 220px; height: 300px; right: 0; top: 50px; border: 1px solid #cbcbcb; display: block;}
+#side-menu li.open div.language > a > span {transform: rotate(180deg);} 
 #side-menu li div.language ul li {position: relative; left: 12px; top: 12px; width: 190px; padding: 2px; font-size: 16px; font-weight: 500; background-color: #f6f6f6;  line-height: 30px;}
 #side-menu li div.language ul li a {padding-left: 8px;}
 #side-menu li div.language ul li + li {margin-top: 6px;}
@@ -167,26 +157,47 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #season {left: 0; top: 0; position: relative; height: 80vh;}
 #season h3 {font-size: 34px; font-weight: 200; text-align: center; padding: 4% 0 2% 0; color: #222222;}
 #season ul.title {position: absolute; left: 50%; top: 150px; transform: translate(-50%, 0); text-align: center;}
-#season ul.title li {float: left; font-size: 18px; font-weight: 100; color: #555555; padding: 10px 20px 35px 20px; }
-#season ul.title > li > a:focus {text-decoration: underline; font-weight: 700; color: #222222;}
+#season ul.title li {float: left; font-size: 20px; font-weight: 100; color: #555555;}
+#season ul.title li + li {margin-left: 30px;}
+#season ul.title > li.on > a,
+#season ul.title > li > a:hover {text-decoration: underline; font-weight: 700; color: #222222;}
+#season ul.title li div.inner-box {position: absolute; width: 1200px; height: 400px; left: -80%; top: 100px;}
+#season ul.title li div.inner-box ul {position: absolute; left: 0; top: 0; width: 100%; height: 380px; padding-bottom: 30px;}
+#season ul.title li div.inner-box ul li {float: left; width: 380px;}
+#season ul.title li div.inner-box ul li img {width: 100%; height: 277px;}
+#season ul.title li div.inner-box ul li + li {margin-left: 25px;}
+#season ul.title li div.inner-box ul li a div.hover {position: absolute; left: 0; top: 0; width: 380px; height: 277px; text-align: center; z-index: 1000000; background-color: #000000; opacity: 0.3; display: none;}
+#season ul.title li div.inner-box ul li:nth-child(2) a div.hover {left: 405px;}
+#season ul.title li div.inner-box ul li:nth-child(3) a div.hover {left: 810px;}
+#season ul.title li div.inner-box ul li a div.hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
 
-#season div.inner-box {position: relative; top: 70px; width: 100%; height: 380px;}
-#season div.inner-box ul {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-bottom: 30px; }
-#season div.inner-box ul li {float: left; left: 0; top: 0; padding-top: 20px;}
-#season div.inner-box ul li + li {padding-left: 20px;}
-#season div.inner-box ul li a img {width: 380px; height: 277px;}
-#season div.inner-box ul li a div.hover {position: absolute; left: 0; top: 20px; width: 380px; height: 277px; text-align: center;}
+#season ul.title li div.inner-box ul li:hover a div.hover {position: absolute; left: 0; top: 0; width: 380px; height: 277px; text-align: center; z-index: 1000000; background-color: #000000; opacity: 0.5; display: block;}
+#season ul.title li div.inner-box ul li:nth-child(2):hover a div.hover {left: 405px;}
+#season ul.title li div.inner-box ul li:nth-child(3):hover a div.hover {left: 810px;}
+#season ul.title li div.inner-box ul li a div.hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
+#season ul.title li div.inner-box ul li a h5 {padding: 10px 0; font-size: 25px; font-weight: 600; color: #333333; text-align: left;}
+#season ul.title li div.inner-box ul li a p {font-size: 16px; color: #000000; text-align: left; }
+#season ul.title li:nth-child(2) div.inner-box ul {display: none;}
+#season ul.title li:nth-child(3) div.inner-box ul {display: none;}
 
-#season div.inner-box ul li + li a div.hover {position: absolute; left: 400px; top: 20px; width: 380px; height: 277px; text-align: center;}
-#season div.inner-box ul li + li + li a div.hover {position: absolute; left: 800px; top: 20px; width: 380px; height: 277px; text-align: center;}
-#season div.inner-box ul li a div.hover p {display: none;}
-#season div.inner-box ul li a div:hover {width: 380px; height: 277px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
-#season div.inner-box ul li a div:hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
-#season div.inner-box ul li a h5 {padding: 10px 0; font-size: 22px; font-weight: 500; color: #333333;}
-#season div.inner-box ul li a p {font-size: 14px; color: #000000;}
+/*
+#season ul.title li div.inner-box ul.on {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-bottom: 30px; display: block;}
+#season ul.title li div.inner-box ul {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-bottom: 30px; display: none;}
 
-#season div.inner-box ul:nth-child(2) {display: none;}
-#season div.inner-box ul:nth-child(3) {display: none;}
+#season ul.title li div.inner-box ul li {float: left; left: 0; top: 0; padding-top: 20px;}
+#season ul.title li div.inner-box ul li + li {padding-left: 20px;}
+#season ul.title li div.inner-box ul li a img {width: 380px; height: 277px;}
+#season ul.title li div.inner-box ul li a div.hover {position: absolute; left: 0; top: 20px; width: 380px; height: 277px; text-align: center;}
+
+#season ul.title li div.inner-box ul li + li a div.hover {position: absolute; left: 400px; top: 20px; width: 380px; height: 277px; text-align: center;}
+#season ul.title li div.inner-box ul li + li + li a div.hover {position: absolute; left: 800px; top: 20px; width: 380px; height: 277px; text-align: center;}
+#season ul.title li div.inner-box ul li a div.hover p {display: none;}
+#season ul.title li div.inner-box ul li a div:hover {width: 380px; height: 277px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
+#season ul.title li div.inner-box ul li a div:hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
+#season ul.title li div.inner-box ul li a h5 {padding: 10px 0; font-size: 22px; font-weight: 500; color: #333333;}
+#season ul.title li div.inner-box ul li a p {font-size: 14px; color: #000000;}
+
+*/
 
 
 #banner {position: relative; width: 100%; height: 260px; top: 50px; padding: 20px 0;}
