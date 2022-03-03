@@ -244,13 +244,11 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #shopping ul div.top div.top-inner li:nth-child(2) a div.detail {position: absolute; background: url(../img/04.png) left center no-repeat;}
 #shopping ul div.top div.top-inner li:nth-child(3) a div.detail {position: absolute; background: url(../img/05.png) left center no-repeat;}
 
-
-
 #festival {position: relative; background-color: #f4f4f4; height: 740px;}
 #festival h3 {font-size: 34px; font-weight: 200; text-align: center; padding: 4% 0 2% 0; color: #222222; margin-bottom: 20px;}
-#festival div.box {position: relative; left: 0; width: 100%; overflow: hidden; background-color: yellow;}
-#festival div.box ul {position: relative; width: 100%; height: 490px; left: 0; top: 0; transform: translate(1%, 0); overflow: hidden; background-color: yellowgreen;}
-#festival div.box ul li {float: left; width: 235px; height: 490px; padding-right: 32px;}
+#festival div.box {position: relative; left: 0; width: 100%; overflow: hidden;}
+#festival div.box ul {position: relative; width: 100%; height: 490px; left: 0; top: 0; overflow: hidden;}
+#festival div.box ul li {float: left; width: 235px; height: 490px; padding-left: 30px;}
 #festival div.box ul li a img {width: 235px; height: 354px; padding-bottom: 20px;}
 #festival div.box ul li em {font-size: 20px;}
 #festival div.box ul li p {font-size: 20px; width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 20px;}

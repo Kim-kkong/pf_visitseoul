@@ -1259,7 +1259,7 @@
 //festival_bannerSlide
 
 var numBanner = 0;
-var bannerNow = 0;
+var bannerNow = 1;
 var bannerPrev = 0;
 var bannerNext = 0;
 var offsetLeft = 0;
@@ -1267,7 +1267,7 @@ var widthBox = 0;
 var widthBar = 0;
 var offsetLeftMin = 0;
 var loadCounter = 0;
-var bounceTimerId = 0;
+var bounceTimerId = '';
 
 $('div.box ul.banner > li img').on('load', function() {
   loadCounter++;
@@ -1277,11 +1277,25 @@ $('div.box ul.banner > li img').on('load', function() {
 });
 
 $('div.box .control a.prev').on('click', function() {
-  showBanner(bannerPrev);
+  if (bannerNow === 1) {
+    $('#festival div.box').find('.banner').css({'transition': 'left 0.05s', 'left': '10px'}).one('transitionend', function() {
+        $(this).css({'transition': 'left 0.1s', 'left': '0px'});
+      });
+      resetTimer();
+    } else {
+      showBanner(bannerPrev);
+    }
 });
 
 $('div.box .control a.next').on('click', function() {
-  showBanner(bannerNext);
+  if (bannerNow === numBanner) {
+      $('#festival div.box').find('.banner').css({'transition': 'left 0.05s', 'left': (offsetLeftMin - 10) + 'px'}).one('transitionend', function() {
+        $(this).css({'transition': 'left 0.1s', 'left': offsetLeftMin + 'px'});
+      });
+      resetTimer();
+    } else {
+      showBanner(bannerNext);
+    }
 });
 
 $(window).on('resize', function() {
@@ -1318,7 +1332,7 @@ $('div.box .banner > li').each(function(i) {
   } 
 });
 
-if (numBanner > bannerNow) bannerNow = numBanner;
+if (numBanner < bannerNow) bannerNow = numBanner;
 showBanner(bannerNow);
 
 }
