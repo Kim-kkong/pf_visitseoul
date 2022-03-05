@@ -431,7 +431,7 @@
         <section id="season">
           <h3>서울에서 겨울 맞이하기</h3>
           <ul class="title">
-            <li><a href="#">분위기 있는 서울</a>
+            <li class="on"><a href="#">분위기 있는 서울</a>
               <div class="inner-box">
                 <ul>
                   <li>
@@ -533,9 +533,6 @@
             
             </li>
           </ul>
-
-
-          
         </section>
 
         <section id="banner">
@@ -799,9 +796,10 @@
             </div>
             <div class="map-info">
               <div class="inner-box">
-                <ul class="slide">
+                <ul class="tab-box">
                   <li>
-                    <h4><a href="#"  class="on">여의도</a></h4>
+                    <h4><a href="#">여의도</a></h4>
+
                     <ul class="inner">
                       <li><a href="#">
                         <img alt="한강예술공원" src="img/intro/hp1-1.png" />
@@ -1340,40 +1338,6 @@ showBanner(bannerNow);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //헤더
 $('#gnb > ul.pc-gnb > li:eq(0) > a').on('mouseenter', function() {
   $('#gnb > ul.pc-gnb > li:eq(0)').addClass('open');
@@ -1456,6 +1420,8 @@ $('#side-menu > li:eq(0) > a').on('click', function() {
 $('#side-menu > li:eq(0) > div.search > a').on('click', function() {
    $('#side-menu > li:eq(0)').removeClass('open'); 
 });
+
+
 
 
 //side-menu_fmailySite
@@ -1558,7 +1524,6 @@ $('ul.title > li:eq(2) > a').on('click', function() {
  */
 
 /*
-
 $('ul.title > li:eq(1) > a').on('click', function() {
   $('ul.title > li:eq(1) > div.inner-box').addClass('on');
   $('ul.title > li:eq(0) > div.inner-box').removeClass('on');
@@ -1571,34 +1536,33 @@ $('ul.title > li:eq(2) > a').on('click', function() {
   $('ul.title > li:eq(0) > div.inner-box').removeClass('on');  
 });
 
-
  */
 
 
 
+//hotplace
+var selectTab = 1;
+
+showTab(1);
+
+$('ul.tab-box > li > h4 > a').on('click', function() {
+  var index = $('ul.tab-box > li > h4').index($(this).parent());
+  $($(this)).addClass('on');
+  //$('ul.tab-box > li:eq(' + (n - 1) + ') > h4 > a').siblings().removeClass('on');
+ 
+  showTab(index + 1);
+});
+
+function showTab(n) {
+  $('ul.tab-box > li:eq(' + (n - 1) + ') > ul.inner').addClass('on'); 
+  $('ul.tab-box > li:eq(' + (n - 1) + ')').siblings().children().removeClass('on');
+  
+
+  showTab === n;
+} 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
+</script>
 
 
 
