@@ -174,6 +174,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #season ul.title li div.inner-box ul li:nth-child(3) > a div.hover {left: 810px;}
 #season ul.title li div.inner-box ul li:nth-child(2):hover > a div.hover {left: 405px;}
 #season ul.title li div.inner-box ul li:nth-child(3):hover > a div.hover {left: 810px;}
+
 #season ul.title li div.inner-box ul li a div.hover p {position: relative; top: 47%; left: 37%;  color: #ffffff; font-weight: 700; display:  none;} 
 #season ul.title li div.inner-box ul li:hover a div.hover {position: absolute; left: 0; top: 0; width: 380px; height: 277px; text-align: center; z-index: 1000000; background-color: #000000; opacity: 0.7; display: block;}
 #season ul.title li div.inner-box ul li:hover a div.hover p {position: relative; top: 47%; left: 37%;  color: #ffffff; font-weight: 700; display: block;} 
@@ -182,12 +183,12 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 
 
 #banner {position: relative; width: 100%; height: 260px; top: 50px; padding: 20px 0;}
-#banner div.slide-box {position: relative; width: 1200px; height: 260px; left: 50%; top: 0; transform: translate(-50%, 0); overflow: hidden;}
-#banner div.slide-box > div.box-inner {position: relative; }
+#banner div.slide-box {position: relative; width: 1200px; height: 260px; left: 50%; top: 0; transform: translate(-50%, 0);}
+#banner div.slide-box > div.box-inner {position: relative; overflow: hidden; }
 #banner div.slide-box > div.box-inner img {width: 1200px; height: 260px;}
 #banner div.slide-box > div.box-inner p.dummy {opacity: 0;}
-#banner div.slide-box > div.box-inner ul.slide {position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
-#banner div.slide-box > div.box-inner ul.slide li {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#banner div.slide-box > div.box-inner ul.slide {position: absolute; top: 0; left: 0; height: 100%; width: 6000px; }
+#banner div.slide-box > div.box-inner ul.slide li {position: absolute; left: 0; top: 0;}
 #banner div.slide-box > div.box-inner ul.slide > li:first-child {display: block;}
 
 #banner p.control {position: absolute; width: 1260px; left: 50%; top: 50%; transform: translate(-50%, -50%);}

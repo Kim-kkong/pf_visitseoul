@@ -132,72 +132,39 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
  
 #season ul.title li + li {margin-left: 10px;}
 
-
-/*
-#season ul.title li.on {background-color: #137DC3; color: #ffffff;}
-#season div.inner-box {position: relative; top: 30%; width: 100%; height: 380px;}
-#season div.inner-box ul {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-bottom: 30px; }
-#season div.inner-box ul li {float: left; left: 0; top: 0; margin-top: 20px; background-color: #ffffff; width: 380px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);}
-#season div.inner-box ul li + li {margin-left: 20px;}
-#season div.inner-box ul li a img {width: 380px; height: 277px;}
-#season div.inner-box ul li a div.hover p {display: none;}
-#season div.inner-box ul li a h5 {padding: 15px 10px; font-size: 22px; font-weight: 500; color: #333333;}
-#season div.inner-box ul li a p {padding: 0 10px 15px 10px; font-size: 18px; color: #333333;}
-#season div.inner-box ul:nth-child(2) {display: none;}
-#season div.inner-box ul:nth-child(3) {display: none;} */
-
-
-
-
-#season ul.title li div.inner-box {position: absolute; width: 4000px; height: 400px; left: -40px; top: 80px;} 
+#season ul.title li div.inner-box {position: absolute; width: 4000px; height: 400px; left: 0; top: 80px;} 
 #season ul.title li div.inner-box ul {position: absolute; left: 0; top: 0; width: 100%; padding-bottom: 30px; background-color: #ffffff; display: none;}
 #season ul.title li div.inner-box.on ul {position: absolute; left: 0; top: 0; width: 100%; padding-bottom: 30px; background-color: #ffffff; display: block; }
 #season ul.title li div.inner-box ul li {float: left; width: 80vw; height: 40vh; border: none; margin-left: 0;}
 #season ul.title li div.inner-box ul li img {width: 100%; height: 100%}
 #season ul.title li div.inner-box ul li a div.hover {display: none;}
-
 #season ul.title li div.inner-box ul li a h5 {padding: 10px 0; font-size: 25px; font-weight: 600; color: #333333; text-align: left;}
 #season ul.title li div.inner-box ul li a p {font-size: 16px; color: #000000; text-align: left; }
 
 
-#banner {position: relative; width: 100%; height: 150px; top: 20%; background-color: #ffffff;}
-#banner ul {position: absolute; width: 100%; height: 94px; overflow: hidden; left: 50%; top: 50%; transform: translate(-45%, -50%);}
-#banner ul li {float: left; left: 0; top: 0; width: 437px; height: 94px;}
-#banner a img.prev {display: none;}
-#banner a img.next {display: none;}
+#banner {position: relative; width: 100%; height: 15vh; top: 0; background-color: #ffffff;}
+#banner ul {position: absolute; width: 5000px; top: 50%; left: 3%;}
+#banner ul li {float: left; width: 80vw; height: 10vh;}
+#banner ul li + li {margin-left: 20px;}
+#banner p.control {display: none;}
+#banner div.slide-box > div.box-inner p.dummy {opacity: 0;}
 
 
-#shopping {position: relative; height: 1030px; width: 100%; background-color: #ffffff;}
+#shopping {position: relative; height: 130vh; width: 100vw; padding-top: 80px; background-color: #ffffff;}
 #shopping h3 {font-size: 34px; font-weight: 750; text-align: center; padding-bottom: 30px; color: #222222;}
-#shopping div.top5 {position: relative; left: 0; top: 0;}
-#shopping ul {position: absolute; max-width: 1200px; height: 1300px; }
-#shopping ul li {}
-#shopping ul li img {}
-#shopping ul li div.detail {}
-#shopping ul li div.detail h4 {font-size: 20px; color: #333333; padding: 20px 0 15px 0;}
-#shopping ul li div.detail p {font-size: 20px; color: #333333;}
-#shopping ul li.top1 {position: relative; width: 400px; height: 290px; left: 60%; top: 0; transform: translate(-50%, 0);}
-#shopping ul li.top1 a img {width: 400px; height: 192px;}
-#shopping ul li.top1 a div.detail {position: relative; right: 0; top: 0; }
-#shopping ul li.top2 {position: absolute; width: 184px; height: 350px; left: 10%; top: 23%;}
-#shopping ul li.top2 a {width: 184px; height: 184px; overflow: hidden;}
-#shopping ul li.top2 a img {width: 184px; height: 184px; }
-#shopping ul li.top2 a div.detail {position: relative; left:0%; top: 0;}
-#shopping ul div.top {position: absolute; top: 20%; left: 50%; transform: translate(-50%, -45%);}
-#shopping ul div.top li:nth-child(1) {float: left; position: relative; width: 184px; height: 210px; top: 120px; left: 60%; transform: translate(20%, 50%);}
-#shopping ul div.top li:nth-child(1) > a > img {height: 184px;}
-#shopping ul div.top li:nth-child(2) {position: absolute; width: 184px; height: 210px; top: 90%; left: 20%; transform: translate(-50%, 80%);}
-#shopping ul div.top li:nth-child(2) > a > img {height: 184px;}
-#shopping ul div.top li:nth-child(3) {float: left; position: relative; width: 184px; height: 210px; top: 100%; left: 60%; transform: translate(20%, 160%);}
-#shopping ul div.top li:nth-child(3) > a > img {height: 184px;}
-#shopping ul li.top1 a div.hover {display: none;}
-#shopping ul li.top1 a div.hover p {display: none;}
-#shopping ul li.top2 a div.hover {display: none;}
-#shopping ul li.top2 a div.hover p {display: none;}
-#shopping ul div.top a div.hover {display: none;}
-#shopping ul div.top li + li a div.hover  {display: none;}
-#shopping ul div.top li + li + li a div.hover {display: none;}
-#shopping ul div.top a div.hover p {display: none;}
+#shopping div.top5 {position: relative; width: 100%; height: 100%; left: 0; top: 0; }
+#shopping div.top5 ul {position: absolute; width: 90%; height: 100%; left: 49%; top: 0; transform: translate(-50%, 0);}
+#shopping div.top5 ul li {float: left; width: 43vw; height: 35vh; margin-left: 2vw; }
+#shopping div.top5 ul li img {width: 100%; height: 60%;}
+#shopping div.top5 ul li.top1 {float: left; width: 98%; height: 45vh; margin-bottom: 30px;}
+#shopping div.top5 ul li.top1 img {width: 100%; height: 80%;}
+#shopping div.top5 ul li div.detail {padding-top: 15px;}
+#shopping div.top5 ul li div.detail h4 {color: #333333; font-size: 20px;}
+#shopping div.top5 ul li div.detail p {color: #333333; font-size: 20px; font-weight: 350; padding-top: 10px;}
+#shopping div.top5 ul li div.hover {display: none;}
+
+
+
 
 #festival {position: relative; background-color: #f4f4f4; height: 500px;}
 #festival h3 {font-size: 34px; font-weight: 750; text-align: center; padding: 50px 0 10px 0; color: #222222; margin-bottom: 20px;}
