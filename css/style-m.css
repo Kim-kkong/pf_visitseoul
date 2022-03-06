@@ -50,8 +50,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #wrapper > div.mobile-quick-menu > ul > li:nth-child(3) {display: none;}
 
 
-
-#gnb {display: block; position: absolute; top: 0; width: 100%; background-color: #ffffff; color: #000000; height: 100vh; overflow: auto; font-size: 16px; transition: left 0.3s;}
+#gnb {display: none; position: absolute; top: 0; width: 100%; background-color: #ffffff; color: #000000; height: 100vh; overflow: auto; font-size: 16px; transition: left 0.3s;}
 #gnb.open {left: 0;}
 #gnb div.mobile-gnb {}
 #gnb div.mobile-gnb > div.title {position: relative; width: 100%; height: 200px;}
@@ -70,8 +69,6 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #gnb ul.sub-menu > li > div.select > ul > li {position: relative; width: 92%; background-color: #f6f6f6; top: 0; line-height: 65px;}
 #gnb ul.sub-menu > li > div.select > ul > li + li {margin-top: 10px;}
 #gnb ul.sub-menu > li > div.select > ul > li > a > span {font-size: 9px;}
-
-
 
 #gnb > ul.pc-gnb {position: relative; margin-top: 35px;}
 #gnb > ul.pc-gnb > li {padding-bottom: 10px; font-size: 25px;}
@@ -255,17 +252,9 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #footer div.main-footer ul.footer-middle li.inquiry ul li {color: #ffffff; margin-top: 40px;}
 #footer div.main-footer ul.footer-middle li.inquiry ul li a.email {text-decoration: underline;}
 #footer div.main-footer ul.footer-middle li.inquiry ul li p.number {font-size: 30px; color: #cbcbcb; font-weight: 1000;}
-
-
-
-
 #footer div.main-footer ul.footer-middle li.mobile-app {top: 200px; width: 220px;}
 #footer div.main-footer ul.footer-middle li.mobile-app h4 {font-size: 18px; color: #ffffff; display: inline-block;}
 #footer div.main-footer ul.footer-middle li.mobile-app a img {height: 38px; margin-top: 10px;}
-
-
-
-
 #footer div.bottom-footer {bottom: 0; left: 0; position: relative; width: 100%; height: 130px; border-top: 1px solid #707070; background-color: #525252;}
 #footer div.bottom-footer div.inner {position: relative; width: 1200px; left: 20px; top: 0; }
 #footer div.bottom-footer p {padding: 20px 0 20px 0; font-size: 14px; color: #ffffff;}
@@ -283,50 +272,55 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; color: #666666; background: #ffffff;}
 
 #sub_main-visual {position: relative; top: 60px;}
-#sub_main-visual > div {width: 1920px; height: 412px;}
-#sub_main-visual > div > img {width: 100%; height: 412px;}
+#sub_main-visual > div {width: 100%; height: 47vh;}
+#sub_main-visual > div > img { height: 100%;}
 #sub_main-visual h2 {position: absolute; left: 10%; bottom: 20%; font-size: 42px; transform: translate(-8%, 30%); font-weight: 600; color: #ffffff; z-index: 10;}
 #sub_main-visual > div > div.black-bar {position: absolute; width: 90%; height: 40px; background-color: rgba(0, 0, 0, 0.7); left: 50%; bottom: 12px; transform: translate(-50%, 0);}
 
+#post {position: relative; top: 60px; width: 100%;}
 
-
-#post {position: relative; top: 60px; height: 3150px; width: 100%;}
-
-#post ul.top {position: absolute; width: 1200px; left: 5%; top: 0; padding: 25px 0; font-size: 16px;}
-#post ul.top li i {color: #000000; font-size: 18px; top: -2px;}
+#post ul.top {position: absolute; width: 90vw; left: 5%; top: 0; padding: 25px 0; font-size: 16px; }
 #post ul.top li {float: left;}
-#post ul.top li + li::before {content: '>'; padding: 0 10px; }
-#post ul.top li h3 {position: absolute; left: 10%; top: 33%; font-size: 18px;}
+#post ul.top li i {color: #000000; font-size: 18px; top: -2px;}
+
+#post ul.top li + li {margin-left: 10px;}
+#post ul.top li + li::before {content: '>'; padding-right: 10px; }
+#post ul.top li h3 {position: absolute; left: 21%; top: 33%; font-size: 18px; line-height: 20px;}
+
 #post div.sub {position: absolute; top: 60px; left: 5%;}
 #post div.sub ul li {position: relative; float: left; top: 10px; width: 70px;}
-#post div.sub ul li a:focus p {color: #137DC3; font-weight: 800;}
+#post div.sub ul li.on p {color: #137DC3; font-weight: 800;}
 #post div.sub ul li + li::before {content: '|';}
 #post div.sub ul li + li p {position: relative; margin-left: 15px; top: -17px;}
 
-#post div.search {position: absolute; width: 250px; height: 50px; left: -60%; top: 35px; text-align: right; font-weight: 100; }
-#post div.search a {box-sizing: border-box;}
-#post div.search a span {position: relative; top: 10px; font-size: 14px; border: 1px solid #767676; padding: 7px 20px 7px 20px; border-radius: 5px;}
-#post div.search a span.on {background-color: #137DC3; color: #ffffff;}
-#post div.search span i {top: -1px; margin-right: 5px; font-size: 14px;}
-#post div.search div.search-box { position: absolute; width: 770px; height: 178px; left: -381%; top: 50px; z-index: 100000; border: 1px solid #767676; background-color: #f6f6f6;}
-#post div.search div.search-box div.inner input {width: 600px; height: 30px; border: none; padding-left: 10px;}
-#post div.search div.search-box div.inner {width: 700px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
-#post div.search div.search-box div.inner span {position: relative; right: 0; top: 2px; margin-left: 15px; padding: 7px 20px 7px 20px; background-color: #555555; color: #ffffff;}
+#post div.sub div.search {position: absolute; width: 250px; height: 50px; left: -60%; top: 40px; text-align: right; font-weight: 100; }
+#post div.sub div.search a {box-sizing: border-box;}
+#post div.sub div.search a span {position: relative; top: 10px; font-size: 14px; border: 1px solid #cbcbcb; padding: 7px 20px 7px 20px; border-radius: 5px;}
+#post div.sub div.search span i {top: -1px; margin-right: 5px; font-size: 14px;}
+#post div.sub div.search.on a span {background-color: #137DC3; border: 1px solid #137DC3; color: #ffffff;}
+#post div.sub div.search div.search-box {position: absolute; width: 80vw; height: 15vh; left: 50%; top: 75%; z-index: 10000; border: 1px solid #cbcbcb; background-color: #f6f6f6; display: none;}
+#post div.sub div.search.on div.search-box {position: absolute; width: 80vw; height: 15vh; left: 50%; top: 75%; z-index: 10000; border: 1px solid #cbcbcb; background-color: #f6f6f6; display: block;}
+#post div.sub div.searchon.on div.search-box div.inner {width: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#post div.sub div.search.on div.search-box div.inner input {position: relative; width: 92%; height: 4vh; border: none; left: 45%; top: 0; transform: translate(-50%, 0); margin-top: 20px; padding-left: 10px;}
+#post div.sub div.search.on div.search-box div.inner span {position: relative; display: inline-block; box-sizing: border-box; width: 75vw; left: -12px; margin-top: 10px; padding: 10px 20px 10px 20px; text-align: center; background-color: #555555; color: #ffffff;}
 
-#post div.post-list {position: relative; width: 770px; height: 1500px; top: 140px;left: 5%; z-index: 0;}
-#post div.post-list > ul {position: absolute; top: 0;}
-#post div.post-list > ul > li {float: left; width: 443px; height: 230px;}
-#post div.post-list > ul > li + li {margin-top: 110px;}
-#post div.post-list > ul > li > a > div.img { width: 443px; height: 210px; overflow: hidden; border-radius: 3px;}
-#post div.post-list > ul > li > a > div.detail {position: relative; width: 423px; height: 150px; top: -30px; left: 0; margin-left: 10px; background-color: #ffffff; border-radius: 5px;}
+
+#post div.post-list {position: relative; width: 100%; height: 3000px; top: 150px; left: 50%; transform: translate(-40%, 0);}
+#post div.post-list > ul {position: absolute; top: 0; height: 400vh; width: 80%;}
+#post div.post-list > ul > li {float: left; width: 100%; height: 230px; }
+#post div.post-list > ul > li + li {margin-top: 100px;}
+#post div.post-list > ul > li > a > div.img { width: 100%; height: 100%; overflow: hidden; border-radius: 3px;}
+#post div.post-list > ul > li > a > div.img img {width: 100%; border-radius: 3px;}
+#post div.post-list > ul > li > a > div.detail {position: relative; width: 95%; height: 50%; top: -30px; left: 0; margin-left: 10px; background-color: #ffffff; border-radius: 5px;}
 #post div.post-list > ul > li > a > div.detail:hover {top: -80px; transition: all 0.5s;}
 #post div.post-list > ul > li > a > div.detail:hover h4 {color: #137DC3;}
 
 #post div.post-list > ul > li > a > div.detail h4 {font-size: 20px; color: #222222; padding: 15px 0 10px 10px; width: 440px; font-weight: 800;}
 #post div.post-list > ul > li > a > div.detail p {padding: 0px 0 10px 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 390px; height: 28px; font-size: 15px;}
-
-#post div.post-list > ul > li > a > div.detail div {position: relative; width: 26px; height: 26px; margin: 15px 0 0 380px;  border: 1px solid #137DC3; border-radius: 100px; background-color: #137DC3;}
-#post div.post-list > ul > li > a > div.detail div > i {top: 5px; left: 7px; color: #ffffff;}
+#post div.post-list > ul > li > a > div.detail div {position: relative;  width: 26px; height: 26px; margin: 15px 0 0 90%;  border: 1px solid #137DC3; border-radius: 100px; background-color: #137DC3; display: none; }
+#post div.post-list > ul > li > a > div.detail div > i {top: 5px; left: 7px; color: #ffffff; display: none;}
+#post div.post-list > ul > li > a > div.detail:hover div {position: relative; width: 26px; height: 26px; margin: 15px 0 0 90%;  border: 1px solid #137DC3; border-radius: 100px; background-color: #137DC3; display: block;}
+#post div.post-list > ul > li > a > div.detail:hover div > i {top: 5px; left: 7px; color: #ffffff;  display: block;}
 
 #post ul.page-indicator {position: absolute; width: 770px; height: 28px; left: 50%; bottom: 5%; transform: translate(-50%, 0);}
 
@@ -340,8 +334,78 @@ body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-si
 #post ul.page-indicator li.more i {top: 4px; left: 5px; font-size: 20px;}
 
 
+/*sub_newyear*/
+body.newyear #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; color: #666666; background: #ffffff;}
 
 
+#sub-post {position: relative; top: 90px; height: 4700px;}
+#sub-post ul.top {position: absolute; width: 90vw; left: 5%; top: 0; padding: 25px 0; font-size: 16px; }
+#sub-post ul.top li {float: left;}
+#sub-post ul.top li i {color: #000000; font-size: 18px; top: -2px;}
+#sub-post ul.top li + li {margin-left: 10px;}
+#sub-post ul.top li + li::before {content: '>'; padding-right: 10px; }
+#sub-post ul.top li h3 {position: absolute; left: 23%; top: 33%; font-size: 18px; line-height: 20px;}
+
+#article {position: relative; }
+#article div.title {position: relative; height: 35vh; width: 100vw; border-bottom: 1px solid #666666;}
+#article div.title h3 {position: absolute; left: 50%; top: 0; transform: translate(-50%, 0); font-size: 16px; color: #0066eb; margin-top: 120px;}
+#article div.title h4 {position: absolute; left: 50%; top: 0; transform: translate(-50%, 0); font-size: 36px; color: #333333; margin-top: 150px; display: block; width: 100%; text-align: center;}
+#article div.title ul {position: absolute; left: 50%; top: 220px; transform: translate(-50%, 0);}
+#article div.title ul li {float: left; margin-left: 10px;}
+#article div.title ul li a img {width: 35px; height: 35px;}
+#article div.title p {position: absolute; left: 50%; top: 300px; transform: translate(-50%, 0); background-color: #ffffff; padding: 0 10px; display: inline-block; width: 60%; text-align: center;}
+
+
+#article div.sec1 {position: relative; top: 50px; left: 0; width: 100vw; padding-left: 15px;}
+#article div.sec1 ul.inner {position: absolute; width: 90%;}
+#article div.sec1 ul.inner li {position: relative; width: 100%; margin-bottom: 80px;}
+#article div.sec1 ul.inner li:nth-child(3) {padding-top: 50px; border-top: 1px solid #c5c5c5;}
+#article div.sec1 ul.inner li:nth-child(4) {padding-top: 50px; border-top: 1px solid #c5c5c5;}
+#article div.sec1 ul.inner li:nth-child(5) {padding-top: 50px; border-top: 1px solid #c5c5c5;}
+
+#article div.sec1 ul.inner li img {width: 100%; margin-bottom: 20px;}
+#article div.sec1 ul.inner li > h4 {position: relative; text-align: center; font-size: 24px; color: #0087c6; display: block; margin-bottom: 30px;}
+#article div.sec1 ul.inner li > p {font-size: 16px; color: #747474; line-height: 30px;}
+#article div.sec1 ul.inner li > a > p.more-info {position: relative; padding: 5px 10px; border: 1px solid #188BD8; width: 100px; height: 20px; background-color: #188BD8; color:  #ffffff; text-align: center; line-height: 20px; border-radius: 22px; margin-top: 25px; left: 50%; top: 0; transform: translate(-50%, 0);}
+
+#article div.sec1 > div.linked_article {position: absolute; top: 3200px; width: 100vw; height: 95vh; left: 50%; transform: translate( -50%, 0);}
+#article div.sec1 > div.linked_article h4 {font-size: 24px; color: #2b2b2b; padding: 20px 0; text-align: center;}
+#article div.sec1 > div.linked_article ul {position: absolute;}
+#article div.sec1 > div.linked_article ul li {float: left; width: 90vw; height: 35vh; padding-top: 25px; box-shadow: 0 4px 8px -4px rgba(0,0,0,0.3); padding-left: 10px;}
+#article div.sec1 > div.linked_article ul li img {width: 100%; height: 70%;}
+#article div.sec1 > div.linked_article ul li h6 {font-size: 14px; color: #666666; padding: 15px 10px 0 10px;}
+#article div.sec1 > div.linked_article ul li h5 {font-size: 16px; color: #666666; padding: 10px 10px 0 10px;}
+#article div.sec1 > div.linked_article p {position: absolute; display: block; width: 90vw; bottom: 0; font-size: 16px; color: #747474;}
+
+
+#sub-post div.linked_tag {position: absolute; width: 100vw; height: 12vh; bottom: 1%; border-bottom: 1px solid #c5c5c5; padding-left: 20px;}
+#sub-post div.linked_tag h4 {font-size: 18px; color: #0066eb; padding-bottom: 15px;}
+#sub-post div.linked_tag h4 img {width: 25px; height: 25px; padding-right: 3px;}
+#sub-post div.linked_tag ul {position: relative; width: 90vw;}
+#sub-post div.linked_tag ul li {float: left; font-size: 16px; color: #767676;}
+#sub-post div.linked_tag ul li + li {padding-left: 15px;}
+
+
+#reply {position: relative; width: 100vw; height: 40vh; padding-top: 40px;}
+#reply div.inner-box {position: absolute; width: 80%; padding-left: 10px; padding-top: 50px;}
+#reply div.inner-box > ul {position: absolute;}
+
+#reply div.inner-box > ul li {float: left; width: 30px; height: 30px; content: ''; display: inline-block; text-indent: -9999px;}
+#reply div.inner-box > ul li + li {margin-left: 10px;}
+#reply div.inner-box > ul li:nth-child(1) {background: url("../img/newyear/ico-box.png") -681px -184px no-repeat;}
+#reply div.inner-box > ul li:nth-child(2) {background: url("../img/newyear/ico-box.png") -650px -91px no-repeat;}
+#reply div.inner-box > ul li:nth-child(3) {background: url("../img/newyear/ico-box.png") -524px -176px no-repeat;}
+#reply div.inner-box > ul li:nth-child(4) {background: url("../img/newyear/ico-box.png") -454px -210px no-repeat;}
+
+#reply div.input_reply {position: absolute; top: 90px; width: 100%; }
+#reply div.input_reply input {width: 90vw; height: 5vh; padding-left: 15px; border-top: none; border-left: none; border-right: none; border: 1px solid #cbcbcb;}
+#reply div.input_reply div.bottom_reply {width: 100vw; height: 31px}
+#reply div.input_reply div.bottom_reply > ul {display: none;}
+
+#reply div.input_reply div.bottom_reply button {position: absolute; top: 0; right: 50%; display: inline-block; height: 5.5vh; width: 10vh; right: -15%; border: 2px solid #D60036; background-color: #D60036; color: #ffffff;}
+
+#reply p {position: absolute; top: 220px; text-align: center; width: 100%; font-size: 14px; color: #757575;}
+#reply img {position: absolute; top: 160px; left: 50%; transform: translate(-50%, 0);}
 
 
 
