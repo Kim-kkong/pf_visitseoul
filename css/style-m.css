@@ -33,16 +33,16 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 
 #side-menu {display: none;}
 
-#wrapper > a.top-button {position: fixed; z-index: 100000; right: 2%; top: 80vh; border: 1px solid #555555; width: 60px; height: 60px; border-radius: 30px; text-align: center; background-color: #ffffff;}
+#wrapper > a.top-button {position: fixed; z-index: 100000; left: 78vw; top: 80vh; border: 1px solid #555555; width: 60px; height: 60px; border-radius: 30px; text-align: center; background-color: #ffffff;}
 #wrapper > a.top-button > img {position: relative; left: 0; top: 50%; transform: translate(0, -50%); width: 16px;}
 
-#wrapper > div.quick-menu {display:none;}
+#wrapper > div.quick-menu {display: none;}
 #wrapper > div.mobile-quick-menu {position: fixed; z-index: 1000000; right: 0; bottom: 5vh; width: 200px; height: 350px;}
 #wrapper > div.mobile-quick-menu > ul {}
 #wrapper > div.mobile-quick-menu > ul > li {width: 200px; height: 65px; padding-top: 15px;}
 #wrapper > div.mobile-quick-menu > ul > li.menu-open {margin: 25px 0 0 8px;}
 #wrapper > div.mobile-quick-menu > ul > li > a > h5 {position: relative; transform: translate(-50%, 50%); left: 0; top: 50%; font-size: 16px; color: #ffffff; text-align: right;}
-#wrapper > div.mobile-quick-menu > ul > li > a > div {width: 60px; height: 60px; position: relative; left: 60%; top: 50%; transform: translate(0, -50%); background-color: #ffffff; border-radius: 100px;}
+#wrapper > div.mobile-quick-menu > ul > li > a > div {width: 60px; height: 60px; position: relative; left: 55vw; top: 50vh; background-color: #ffffff; border-radius: 100px;}
 #wrapper > div.mobile-quick-menu > ul > li > a > div.open-close {position: fixed; right: -30%; bottom: 50%; transform: translate(200%, 600%); background-color: #137DC3;}
 #wrapper > div.mobile-quick-menu > ul > li > a > div.open-close > i {font-size: 20px; color: #ffffff; position: relative; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 #wrapper > div.mobile-quick-menu > ul > li:nth-child(1) {display: none;}
@@ -51,47 +51,49 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 
 
 
-#gnb {display: none; position: absolute; top: 0; width: 100%; background-color: #ffffff; color: #000000; height: 100vh; overflow: auto; font-size: 16px; transition: left 0.3s;}
+#gnb {display: block; position: absolute; top: 0; width: 100%; background-color: #ffffff; color: #000000; height: 100vh; overflow: auto; font-size: 16px; transition: left 0.3s;}
 #gnb.open {left: 0;}
 #gnb div.mobile-gnb {}
-#gnb div.mobile-gnb > div.title {position: relative; width: 100%; height: 200px; }
+#gnb div.mobile-gnb > div.title {position: relative; width: 100%; height: 200px;}
 #gnb div.mobile-gnb > div.title img.logo {position: absolute; width: 234px; left: 5%; top: 15%; transform: translate(0, -50%);}
 #gnb div.mobile-gnb > div.title > a > img.close {position: absolute; width: 50px; right: 5%; top: 15%; transform: translate(0, -50%);}
 #gnb div.mobile-gnb > div.title > div.login {position: absolute; width: 175px; height: 50px; border: 1px solid #333333; left: 5%; top: 60%; transform: translate(0, -50%);}
 #gnb div.mobile-gnb > div.title > div.login > a > img {position: relative; width: 25px; height: 25px;  left: 50%; top: 50%; transform: translate(-50%, -50%);}
-
 #gnb ul.sub-menu { position: relative; height: 70px; width: 100%;  z-index: 100000;}
-#gnb ul.sub-menu > li {position: relative; float: left; width: 177px; height: 58px; border-bottom: 1px solid #333333; font-size: 22px; left: 13%; top: 50%; transform: translate(0, -50%);}
-#gnb ul.sub-menu > li + li {margin-left: 25px;}
-#gnb ul.sub-menu > li > a {position: relative; left: 0; top: 30%; transform: translate(0, -50%);}
-#gnb ul.sub-menu > li > a > i {color: #999999; padding-left: 45px;}
-#gnb ul.sub-menu > li + li > a > i {color: #999999; padding-left: 90px;}
+#gnb ul.sub-menu > li {position: relative; float: left; width: 45%; height: 6vh; border-bottom: 1px solid #333333; font-size: 22px; left: 0; top: 50%; transform: translate(10%, -60%);}
+#gnb ul.sub-menu > li + li {margin-left: 20px;}
+#gnb ul.sub-menu > li > a {position: relative; display: inline-block; height: 100%; width: 100%; line-height: 54px;}
+#gnb ul.sub-menu > li > a i {position: absolute; color: #999999; right: 0; top: 50%; transform: translate(0, -50%);}
+#gnb ul.sub-menu > li > div.select.on {position: relative; left: 0; top: 0; font-size: 18px; background-color: #ffffff; border: 1px solid #e5e5e5; display: block;}
+#gnb ul.sub-menu > li > div.select {position: relative; left: 0; top: 0; font-size: 18px; background-color: #ffffff; border: 1px solid #e5e5e5; display: none;}
+#gnb ul.sub-menu > li > div.select > ul {width: 100%; padding: 10px;}
+#gnb ul.sub-menu > li > div.select > ul > li {position: relative; width: 92%; background-color: #f6f6f6; top: 0; line-height: 65px;}
+#gnb ul.sub-menu > li > div.select > ul > li + li {margin-top: 10px;}
+#gnb ul.sub-menu > li > div.select > ul > li > a > span {font-size: 9px;}
 
-#gnb ul.sub-menu > li > div.select {display: none;}
-#gnb ul.sub-menu > li > div.select {position: relative; left: 0; top: 23px; height: 535px; font-size: 18px; background-color: #ffffff;}
-#gnb ul.sub-menu > li > div.select > ul > li {position: relative; width: 90%; height: 65px; background-color: #f6f6f6; margin: 10px 0 0 10px; top: 10px; padding-left: 10px; line-height: 65px;}
-#gnb ul.sub-menu > li > div.select > ul > li > a > span {font-size: 9px; color: #188BD8;}
 
-#gnb > ul {position: relative; margin-top: 35px;}
-#gnb > ul > li {padding-bottom: 10px; font-size: 25px;}
-#gnb > ul > li > a {display: inline-block; position: relative; width: 85%; height: 70px; background-color: #ffffff; line-height: 70px; margin-left: 30px;font-weight: 100; border-bottom: 1px solid #333333;}
-#gnb > ul > li > a > i {position: absolute; right: 0; top: 50%; transform: translate(0, -50%);}
-#gnb > ul > li.on {font-weight: 700;}
-#gnb > ul > li div.sub > div.content > div.title {display: none;}
-#gnb > ul > li div.sub > ul {overflow: hidden; background-color: #111111;}
-#gnb > ul > li div.sub > ul > li {height: 50px; overflow: hidden; height: 0; transition: height 0.3s;}
-#gnb > ul > li div.sub > ul > li + li > a {border-top: 1px solid #222222;}
-#gnb > ul > li div.sub > ul > li > a {display: block; line-height: 49px; padding-left: 30px; position: relative;}
 
-#gnb > ul > li div.sub> ul > li.open > a i {transform: translate(0, -50%) rotate(180deg);}
-#gnb > ul > li div.sub> ul > li > ul {overflow: hidden; background-color: #181818;}
-#gnb > ul > li div.sub > ul > li > ul > li {height: 50px; overflow: hidden; height: 0; transition: height 0.3s;}
-#gnb > ul > li div.sub > ul > li > ul > li + li > a {border-top: 1px dashed #333333;}
-#gnb > ul > li div.sub > ul > li > ul > li > a {display: block; line-height: 49px; font-size: 14px; padding-left: 60px; position: relative;}
+#gnb > ul.pc-gnb {position: relative; margin-top: 35px;}
+#gnb > ul.pc-gnb > li {padding-bottom: 10px; font-size: 25px;}
+#gnb > ul.pc-gnb > li > a {display: inline-block; position: relative; width: 85%; height: 70px; background-color: #ffffff; line-height: 70px; margin-left: 30px;font-weight: 100; border-bottom: 1px solid #333333;}
+#gnb > ul.pc-gnb > li.on > a > i {position: absolute; right: 0; top: 50%; transform: translate(0, -50%) rotate(180deg); color: #999999;}
+#gnb > ul.pc-gnb > li > a > i {position: absolute; right: 0; top: 50%; transform: translate(0, -50%); color: #999999;}
+#gnb > ul.pc-gnb > li.on > a {font-weight: 800;}
+#gnb > ul.pc-gnb > li div.sub > div.content > div.title {display: none;}
 
-#gnb > ul > li div.sub > div.content > div.inner {position: relative;}
-#gnb > ul > li div.sub > div.content > div.inner > ul {position: absolute; left: 16%; top: 0; z-index: 10000000; background-color: #ffffff; width: 75%; height: 300px; font-weight: 400;}
-#gnb > ul > li div.sub > div.content > div.inner > ul > li {position: relative; width: 100%; height: 60px; line-height: 65px; border-bottom: 1px solid #333333;}
+#gnb > ul.pc-gnb > li div.sub > div.content > div.inner {position: relative; display: none;}
+#gnb > ul.pc-gnb > li.on div.sub > div.content > div.inner {position: relative; display: block;}
+
+#gnb > ul.pc-gnb > li div.sub > div.content > div.inner > ul {position: absolute; left: 16%; top: 0; z-index: 10000000; background-color: #ffffff; width: 75%; font-weight: 400;}
+#gnb > ul.pc-gnb > li div.sub > div.content > div.inner > ul > li {position: relative; width: 100%; height: 6vh; line-height: 65px; border-bottom: 1px solid #555555;}
+#gnb > ul.pc-gnb > li div.sub > div.content > div.inner > ul > li > a {display: block; line-height: 55px; padding-left: 30px; position: relative;}
+
+
+
+
+
+
+
 
 /* main */
 #main {position: relative; top: 0; left: 0;}
@@ -165,58 +167,42 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 
 
 
-
-#festival {position: relative; background-color: #f4f4f4; height: 500px;}
+#festival {position: relative; background-color: #f4f4f4; height: 65vh;}
 #festival h3 {font-size: 34px; font-weight: 750; text-align: center; padding: 50px 0 10px 0; color: #222222; margin-bottom: 20px;}
-#festival ul {position: absolute; max-width: 770px; height: 350px; overflow: hidden; left: 1%; padding-right: 10px; }
-#festival ul li {float: left; width: 136px; height: 250px;}
-#festival ul li div {position: absolute; background-color: #f4f4f4; width: 150px; height: 155px; z-index: 10; margin-left: 5px; padding-left: 10px;}
+#festival ul {position: absolute; max-width: 770px; height: 80%; overflow: hidden; left: 1%; padding-right: 10px; }
+#festival ul li {float: left; width: 30vw; height: 100%; }
+#festival ul li div {position: absolute; background-color: #f4f4f4; width: 100%; height: 30%; z-index: 10; margin-left: 5px; padding-left: 10px;}
 #festival ul li + li {padding-left: 18px;}
-#festival ul li a img {width: 133px; left: 50%; top: 0; transform: translate(10%, 0);}
-#festival ul li div em {display: none;}
-#festival ul li div p {font-size: 20px; width: 136px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 20px; }
-#festival ul li p + p {font-size: 15px;}
-#festival a img.prev {display: none;}
-#festival a img.next {display: none;}
+#festival ul li a img {width: 100%; left: 50%; top: 0; transform: translate(8%, 0);}
+#festival ul li div em {position: absolute; padding: 10px; background-color: #e5e5e5; top: 70%;}
+#festival ul li div p {font-size: 22px; width: 30vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 20px;}
+#festival ul li p + p {font-size: 15px; width: 30vw; padding-top: 20px; }
+#festival p.control {display: none;}
 
 
-#hotplace {left: 0; top: 0; position: relative; width: 100%; height: 1400px; background-color: #ffffff;}
+
+#hotplace {position: relative; width: 100%; height: 160vh; background-color: #ffffff;}
 #hotplace h3 {font-size: 34px; font-weight: 750; text-align: center; color: #222222; padding: 80px 0 30px 0;}
-#hotplace div.content {position: absolute; max-width: 770px; height: 1000px;}
+#hotplace div.content {position: absolute; height: 100%;}
 #hotplace div.content div.map {display: none;}
 
+#hotplace div.map-info div.inner-box {position: relative; margin: 0 40px; height: 100%;}
+#hotplace div.map-info div.inner-box ul.tab-box {position: relative; width: 5000px; height: 100%;}
+#hotplace div.map-info div.inner-box ul.tab-box > li {float: left; width: 75vw; height: 100%; padding-bottom: 20px; margin-right: 15px; background-color: #137DC3;}
+
+#hotplace div.map-info div.inner-box ul.tab-box li div.hover {display: none;}
+#hotplace div.map-info div.inner-box ul.tab-box li h4 {font-size: 38px; color: #ffffff; left: 15px; top: 0; position: relative; padding: 30px 0; }
+#hotplace div.map-info div.inner-box ul.tab-box li ul.inner {}
+#hotplace div.map-info div.inner-box ul.tab-box li ul.inner li {position: relative; height: 15vh; }
+#hotplace div.map-info div.inner-box ul.tab-box li ul.inner li h5 {width: 90%; position: relative; top: -20%; left: 35%; transform: translate(0, -220%); font-size: 26px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #ffffff; font-weight: 600;}
+#hotplace div.map-info div.inner-box ul.tab-box li ul.inner li img {position: relative; width: 20vw; height: 12vh; left: 20px; top: 0; transform: translate(0, 12%); }
+#hotplace div.map-info div.inner-box ul.tab-box li ul.inner li p {position: relative; top: 0; left: 35%; transform: translate(0, -135%); width: 60%; height: 40%; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; padding-top: 5px; font-size: 24px; color: #ffffff; font-weight: 200; }
 
 
-#hotplace div.map-info > div.inner-box ul.slide li h4 {font-size: 38px; color: #ffffff; left: 15px; top: 0; position: relative; padding: 30px 0; }
-#hotplace div.map-info > div.inner-box ul.slide {position: relative; left: 0; top: 0; max-width: 770px; height: 600px;}
-#hotplace div.map-info > div.inner-box ul.slide li {width: 80vw; height: 130px; left: 50px; top: 20px; background-color: #137DC3; padding-bottom: 5px;}
+#hotplace div.more_info {position: relative; height: 50vh; left: 0; top: 35%;}
+#hotplace div.more_info ul {position: relative; width: 100%; height: 50vh; left: 60%; top: 20%; transform: translate(-50%, 30%);}
+#hotplace div.more_info ul li {width: 80%; height: 15%; margin-bottom: 60px;}
 
-#hotplace div.map-info > div.inner-box ul.slide li h5 {width: 90%; position: relative; top: -8%; left: 30%; transform: translate(0, -250%); font-size: 26px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #ffffff; font-weight: 600;}
-#hotplace div.map-info > div.inner-box ul.slide li img {position: relative; width: 89px; height: 100px; left: 15px; top: 0; transform: translate(0, 12%); }
-
-#hotplace div.map-info > div.inner-box ul.slide li p {position: relative; top: 0; left: 30%; transform: translate(0, -135%); width: 274px; height: 54px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; padding-top: 5px; font-size: 24px; color: #ffffff; font-weight: 200; }
-
-#hotplace div.map-info > div.inner-box ul.slide li div.hover {display: none;}
-#hotplace div.map-info > div.inner-box {position: relative; width: 940px; margin: 0 auto;}
-#hotplace div.map-info > div.inner-box > div.box {position: relative;}
-#hotplace div.map-info > div.inner-box > div.box img {width: 100%;}
-#hotplace div.map-info > div.inner-box p.dummy {opacity: 0;}
-#hotplace div.map-info > div.inner-box ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-div.inner-box ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-#hotplace div.map-info > div.inner-box ul.slide li:nth-child(2) {left: 200%;}
-#hotplace div.map-info > div.inner-box ul.slide li:nth-child(3) {left: 300%;}
-#hotplace div.map-info > div.inner-box ul.slide li:nth-child(4) {left: 400%;}
-#hotplace div.map-info > div.inner-box ul.slide li:nth-child(5) {display: none;}
-div.inner-box ul.slide > li > a {display: block; position: relative;}
-
-
-
-
-
-
-#hotplace div.more_info {position: relative; height: 600px; left: 0; top: 32%;}
-#hotplace div.more_info ul {position: relative; width: 402px; height: 500px; left: 50%; top: 20%; transform: translate(-50%, 30%);}
-#hotplace div.more_info ul li {width: 402px; height: 125px;}
 #hotplace div.more_info ul li a {position: relative; height: 100px;}
 #hotplace div.more_info ul li a img {height: 100px;}
 #hotplace div.more_info ul li a h4 {height: 30px; width: 200px; position: absolute; font-size: 22px; color: #ffffff; left: 0%; top: 30%; transform: translate(0, -30%); font-weight: 400; padding-left: 25px;}
@@ -224,17 +210,14 @@ div.inner-box ul.slide > li > a {display: block; position: relative;}
 
 
 
-#tv {position: relative; width: 100%; height: 600px; background-color: #ffffff;}
+#tv {position: relative; top: 0; width: 100%; height: 80vh; background-color: #ffffff;}
 #tv h3 {font-size: 34px; font-weight: 750; text-align: center; color: #222222; padding-bottom: 30px;}
-#tv ul li a img.youtube {width: 195px; height: 110px;}
-#tv div.media {position: relative; width: 100%; height: 100%;}
-#tv div.media ul {position: absolute; max-width: 770px; height: 1250px; overflow: hidden; left: 10%; top: 0;}
-#tv div.media ul li {float: left;}
-#tv div.media ul li:nth-child(2n) {padding-left: 10px;}
-#tv div.media ul li:nth-child(3) {padding-top: 100px;}
-#tv div.media ul li:nth-child(4) {padding-top: 100px;}
-#tv div.media ul li a h4 {font-size: 22px; font-weight: 400; padding-top: 10px; width: 195px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-#tv div.img_detail {font-size: 18px; display: block; position: absolute; color: #333333; padding: 10px 0 20px 0; width: 195px; }
+#tv ul li a img.youtube {width: 100%; height: 50%;}
+#tv div.media {position: relative; width: 100%; height: 100%; }
+#tv div.media ul {position: absolute; width: 100%; height: 50vh; left: 10%; top: 0;}
+#tv div.media ul li {float: left; width: 40%; height: 70%; margin-right: 20px;}
+#tv div.media ul li a h4 {font-size: 22px; font-weight: 400; padding-top: 10px; width: 30vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+#tv div.img_detail {font-size: 18px; display: block; position: absolute; color: #333333; padding: 10px 0 20px 0; width: 35vw; }
 
 #tv div.img_detail p.sub-title {display: none;}
 #tv div.img_detail img {float: left; padding: 0 15px 5px 0px;}
