@@ -33,21 +33,30 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 
 #side-menu {display: none;}
 
-#wrapper > a.top-button {position: fixed; z-index: 100000; left: 78vw; top: 80vh; border: 1px solid #555555; width: 60px; height: 60px; border-radius: 30px; text-align: center; background-color: #ffffff;}
+#wrapper > a.top-button {position: fixed; z-index: 1000000; right: 2%; top: 80vh; border: 1px solid #555555; width: 50px; height: 50px; border-radius: 30px; text-align: center; background-color: #ffffff;}
 #wrapper > a.top-button > img {position: relative; left: 0; top: 50%; transform: translate(0, -50%); width: 16px;}
 
-#wrapper > div.quick-menu {display: none;}
-#wrapper > div.mobile-quick-menu {position: fixed; z-index: 1000000; right: 0; bottom: 5vh; width: 200px; height: 350px;}
-#wrapper > div.mobile-quick-menu > ul {}
-#wrapper > div.mobile-quick-menu > ul > li {width: 200px; height: 65px; padding-top: 15px;}
-#wrapper > div.mobile-quick-menu > ul > li.menu-open {margin: 25px 0 0 8px;}
+#wrapper > div.quick-menu {display: block; position: fixed; z-index: 1000000; right: 2%; top: 80vh; border: 1px solid #555555; width: 50px; height: 50px; border-radius: 30px; text-align: center; background-color: #ffffff;}
+/* #wrapper > div.quick-menu::before {content: ''; position: absolute; background-color: #000000; left: -850%; top: -1300%; width: 100vw; height: 100vh; opacity: 0.3;} */
+#wrapper > div.quick-menu ul {position: absolute; top: 70vh; right: 2%; z-index: 1000000;}
+
+
+
+
+#wrapper > div.mobile-quick-menu {display: none; position: fixed; z-index: 1000000; right: 0; top: 80vh;  width: 200px; height: 350px;}
+#wrapper > div.mobile-quick-menu > ul {background-color: yellow;}
+
+
+
+/* #wrapper > div.mobile-quick-menu > ul > li {width: 200px; height: 65px; padding-top: 15px;}
+#wrapper > div.mobile-quick-menu > ul > li.menu-control {margin: 25px 0 0 8px;}
 #wrapper > div.mobile-quick-menu > ul > li > a > h5 {position: relative; transform: translate(-50%, 50%); left: 0; top: 50%; font-size: 16px; color: #ffffff; text-align: right;}
 #wrapper > div.mobile-quick-menu > ul > li > a > div {width: 60px; height: 60px; position: relative; left: 55vw; top: 50vh; background-color: #ffffff; border-radius: 100px;}
-#wrapper > div.mobile-quick-menu > ul > li > a > div.open-close {position: fixed; right: -30%; bottom: 50%; transform: translate(200%, 600%); background-color: #137DC3;}
-#wrapper > div.mobile-quick-menu > ul > li > a > div.open-close > i {font-size: 20px; color: #ffffff; position: relative; left: 50%; top: 50%; transform: translate(-50%, -50%);}
-#wrapper > div.mobile-quick-menu > ul > li:nth-child(1) {display: none;}
-#wrapper > div.mobile-quick-menu > ul > li:nth-child(2) {display: none;}
-#wrapper > div.mobile-quick-menu > ul > li:nth-child(3) {display: none;}
+#wrapper > div.mobile-quick-menu > ul > li > a {position: fixed; right: 0; bottom: 50%; border-radius: 100px; background-color: #137DC3;}
+#wrapper > div.mobile-quick-menu > ul > li > a > i {font-size: 20px; color: #ffffff; position: relative; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#wrapper > div.mobile-quick-menu > ul > li:nth-child(1) {display: block;}
+#wrapper > div.mobile-quick-menu > ul > li:nth-child(2) {display: block;}
+#wrapper > div.mobile-quick-menu > ul > li:nth-child(3) {display: block;} */
 
 
 #gnb {display: none; position: absolute; top: 0; width: 100%; background-color: #ffffff; color: #000000; height: 100vh; overflow: auto; font-size: 16px; transition: left 0.3s;}
@@ -122,7 +131,7 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #main-visual div.slide-box div.box p.control a.next::before {left: calc(50% - 50px);}
 
 
-#season {background-color: #ffffff; left: 0; top: 0; position: relative; height: 730px;}
+#season {background-color: #ffffff; left: 0; top: 0; position: relative; height: 700px;}
 #season h3 {font-size: 34px; font-weight: 700; text-align: center; padding: 50px 0 2% 0; color: #222222;}
 #season ul.title {position: absolute; width: 450px; left: 50%; top: 20%; transform: translate(-50%, 0); text-align: center;}
 #season ul.title li {float: left; font-size: 20px; font-weight: 100; color: #555555; padding: 10px 10px; border: 1px solid #C7C7C7; line-height: 30px;}
@@ -141,15 +150,15 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #season ul.title li div.inner-box ul li a p {font-size: 16px; color: #000000; text-align: left; }
 
 
-#banner {position: relative; width: 100%; height: 15vh; top: 0; background-color: #ffffff;}
-#banner ul {position: absolute; width: 5000px; top: 50%; left: 3%;}
-#banner ul li {float: left; width: 80vw; height: 10vh;}
-#banner ul li + li {margin-left: 20px;}
+#banner {position: relative; width: 100%; top: 0; background-color: #ffffff;}
+#banner ul {position: absolute; top: 50%;}
+#banner ul li {position: absolute;}
+#banner ul li + li {margin-left: 20px;} 
 #banner p.control {display: none;}
 #banner div.slide-box > div.box-inner p.dummy {opacity: 0;}
 
 
-#shopping {position: relative; height: 130vh; width: 100vw; padding-top: 80px; background-color: #ffffff;}
+#shopping {position: relative; height: 130vh; width: 100vw; background-color: #ffffff;}
 #shopping h3 {font-size: 34px; font-weight: 750; text-align: center; padding-bottom: 30px; color: #222222;}
 #shopping div.top5 {position: relative; width: 100%; height: 100%; left: 0; top: 0; }
 #shopping div.top5 ul {position: absolute; width: 90%; height: 100%; left: 49%; top: 0; transform: translate(-50%, 0);}

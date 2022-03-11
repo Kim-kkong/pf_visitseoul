@@ -63,11 +63,9 @@
               <img alt="FAQ" src="img/icn_quickMenu_faq@2x.png" />
               </div>
           </a></li>
-          <li class="menu-open">
+          <li class="menu-control">
             <a href="#">
-              <div class="open-close">
               <i class="fas fa-plus"></i>
-              </div>
             </a>
           </li>
         </ul>
@@ -277,11 +275,13 @@
           </nav>
           
 
-          <ul id="side-menu">
+          <ul id="side-menu" class="side">
             <li>
-              <a href="#">
-                <img alt="search" src="img/ico-search-gray@2x.png" />
-              </a>
+              <div class="title">
+                <a href="#">
+                  <img alt="search" src="img/ico-search-gray@2x.png" />
+                </a>
+              </div> 
               <div class="search">
                 <div class="search-box">
                   <input type="text" name="" id="search-keyword" placeholder="검색어를 입력해 주세요" />
@@ -430,7 +430,7 @@
         <section id="season">
           <h3>서울에서 겨울 맞이하기</h3>
           <ul class="title">
-            <li class="on"><a href="#">분위기 있는 서울</a>
+            <li><a href="#">분위기 있는 서울</a>
               <div class="inner-box">
                 <ul>
                   <li>
@@ -1224,7 +1224,7 @@
 
 
   $('div.box-inner ul.slide > li').each(function(i) {
-    $(this).css({'top': (i * 100) + '%'});
+    $(this).css({'left': (i * 100) + '%'});
   });
 
   showSeason(seasonFirst);
@@ -1242,7 +1242,7 @@
 
   function showSeason(n) {
     
-    $('div.box-inner ul.slide').css({'transition': 'top 0.3s', 'top': (-(n - 1) * 100) + '%'});
+    $('div.box-inner ul.slide').css({'transition': 'left 0.3s', 'left': (-(n - 1) * 100) + '%'});
 
     seasonNow = n;
     seasonPrev = (n === 1) ? numSeason : (n - 1);
@@ -1308,7 +1308,7 @@ function showBanner(n) {
   bannerNow = n;
   bannerPrev = (n === 1) ? 1 : (n - 1);
   bannerNext = (n === numBanner) ? numBanner : (n + 1);
-  console.log(bannerPrev + ' / ' + bannerNow + '/' + bannerNext + '/');
+  //console.log(bannerPrev + ' / ' + bannerNow + '/' + bannerNext + '/');
 }
 
 function setStatus() {
@@ -1338,107 +1338,24 @@ showBanner(bannerNow);
 
 
 //헤더
-$('#gnb > ul.pc-gnb > li:eq(0) > a').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(0)').addClass('open');
+$('#gnb > ul.pc-gnb > li > a').on('mouseenter', function() {
+  $(this).parent().addClass('open');
 });
-$('#gnb > ul.pc-gnb > li:eq(0) > a').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(0)').removeClass('open');
+$('#gnb > ul.pc-gnb > li > a').on('mouseleave', function() {
+  $(this).parent().removeClass('open');
 });
-$('#gnb > ul.pc-gnb > li:eq(0) > div.sub').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(0)').addClass('open');
+$('#gnb > ul.pc-gnb > li > div.sub').on('mouseenter', function() {
+  $(this).parent().addClass('open');
 });
-$('#gnb > ul.pc-gnb > li:eq(0) > div.sub').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(0)').removeClass('open');
-});
-  
-  
-  
-$('#gnb > ul.pc-gnb > li:eq(1) > a').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(1)').addClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(1) > a').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(1)').removeClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(1) > div.sub').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(1)').addClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(1) > div.sub').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(1)').removeClass('open');
-});
-  
-  
-  
-$('#gnb > ul.pc-gnb > li:eq(2) > a').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(2)').addClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(2) > a').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(2)').removeClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(2) > div.sub').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(2)').addClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(2) > div.sub').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(2)').removeClass('open');
-});
-  
-  
-  
-$('#gnb > ul.pc-gnb > li:eq(3) > a').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(3)').addClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(3) > a').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(3)').removeClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(3) > div.sub').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(3)').addClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(3) > div.sub').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(3)').removeClass('open');
-});
-  
-  
-  
-$('#gnb > ul.pc-gnb > li:eq(4) > a').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(4)').addClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(4) > a').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(4)').removeClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(4) > div.sub').on('mouseenter', function() {
-  $('#gnb > ul.pc-gnb > li:eq(4)').addClass('open');
-});
-$('#gnb > ul.pc-gnb > li:eq(4) > div.sub').on('mouseleave', function() {
-  $('#gnb > ul.pc-gnb > li:eq(4)').removeClass('open');
+$('#gnb > ul.pc-gnb > li > div.sub').on('mouseleave', function() {
+  $(this).parent().removeClass('open');
 });
   
 
-//side-menu_search
-$('#side-menu > li:eq(0) > a').on('click', function() {
-   $('#side-menu > li:eq(0)').addClass('open'); 
-});
-$('#side-menu > li:eq(0) > div.search > a').on('click', function() {
-   $('#side-menu > li:eq(0)').removeClass('open'); 
-});
 
-
-
-
-//side-menu_fmailySite
-$('#side-menu > li:eq(2) > div.title > a').on('click', function() {
-   $('#side-menu > li:eq(2)').addClass('open'); 
-});
-$('#side-menu > li:eq(2).open > div.title > a').on('click', function() {
-   $('#side-menu > li:eq(2).open').removeClass('open'); 
-});
-
-
-
-//side-menu_language
-$('#side-menu > li:eq(3) > div.title > a').on('click', function() {
-   $('#side-menu > li:eq(3)').addClass('open'); 
-});
-$('#side-menu > li:eq(3).open > div.title > a').on('click', function() {
-   $('#side-menu > li:eq(3).open').removeClass('open'); 
+//side-menu
+$('#side-menu > li').on('click', function(){
+  $(this).toggleClass('open');
 });
 
 
@@ -1448,29 +1365,12 @@ var classOn = true;
 
 $('#wrapper > div.quick-menu > p').on('click', function() {
   if (classOn === true) {
-
     menuOn();
-    /* $('#wrapper > div.quick-menu').addClass('on');
-    $('#wrapper > div.quick-menu').css({'transition': 'all 0.3s'});  */
   } else {
-
     menuOff();
-    /* $('#wrapper > div.quick-menu').removeClass('on'); 
-    $('#wrapper > div.quick-menu').css({'transition': 'all 0.3s'}); */
   }
 });
 
-/* $('#wrapper > div.quick-menu > p').on('click', function() {
-  $('#wrapper > div.quick-menu').addClass('on'); 
-  $('#wrapper > div.quick-menu').css({'transition': 'all 0.3s'});
-});
-
-$('#wrapper > div.quick-menu.on > p').on('click', function() {
-  $('#wrapper > div.quick-menu.on').removeClass('on'); 
-  $('#wrapper > div.quick-menu').css({'transition': 'all 0.3s'});
-});
-
- */
 
 function menuOn() {
   $('#wrapper > div.quick-menu').addClass('on'); 
@@ -1480,7 +1380,7 @@ function menuOn() {
 
 function menuOff() {
   $('#wrapper > div.quick-menu').removeClass('on'); 
-  $('#wrapper > div.quick-menu').css({'transition': 'all 0.3s'});
+  $(this).css({'transition': 'all 0.3s'});
   classOn = true;
 }
 
@@ -1505,38 +1405,6 @@ function showSelect(n) {
   selectNow === n;
 } 
 
-/* 
-$('ul.title > li:eq(0) > a').on('click', function() {
-  $('ul.title > li:eq(0) > div.inner-box').addClass('on'); 
-  $('ul.title > li:eq(0)').siblings().children().removeClass('on');
-});
-
-$('ul.title > li:eq(1) > a').on('click', function() {
-  $('ul.title > li:eq(1) > div.inner-box').addClass('on'); 
-  $('ul.title > li:eq(1)').siblings().children().removeClass('on');
-});
-
-$('ul.title > li:eq(2) > a').on('click', function() {
-  $('ul.title > li:eq(2) > div.inner-box').addClass('on'); 
-  $('ul.title > li:eq(2)').siblings().children().removeClass('on');
-});
- */
-
-/*
-$('ul.title > li:eq(1) > a').on('click', function() {
-  $('ul.title > li:eq(1) > div.inner-box').addClass('on');
-  $('ul.title > li:eq(0) > div.inner-box').removeClass('on');
-  $('ul.title > li:eq(2) > div.inner-box').removeClass('on');  
-});
-
-$('ul.title > li:eq(2) > a').on('click', function() {
-  $('ul.title > li:eq(2) > div.inner-box').addClass('on');
-  $('ul.title > li:eq(1) > div.inner-box').removeClass('on');
-  $('ul.title > li:eq(0) > div.inner-box').removeClass('on');  
-});
-
- */
-
 
 
 //hotplace
@@ -1544,13 +1412,24 @@ var selectTab = 1;
 
 showTab(1);
 
-$('ul.tab-box > li > h4 > a').on('click', function() {
-  var index = $('ul.tab-box > li > h4').index($(this).parent());
-  $($(this)).addClass('on');
-  //$('ul.tab-box > li:eq(' + (n - 1) + ') > h4 > a').siblings().removeClass('on');
- 
+  $('div.map > ul > li > a').on('click', function(n) {
+  var index = $('div.map > ul > li').index($(this).parent());
+  $('ul.tab-box > li > h4 > a').removeClass('on');
+  $('ul.tab-box > li:eq('+ index +') > h4 > a').addClass('on');
+  
   showTab(index + 1);
-});
+
+  });
+
+
+  $('ul.tab-box > li > h4 > a').on('click', function(n) {
+  var num = $('ul.tab-box > li > h4').index($(this).parent());
+  $('ul.tab-box > li > h4 > a').removeClass('on');
+  $(this).addClass('on');
+  
+  showTab(num + 1);
+  }); 
+
 
 function showTab(n) {
   $('ul.tab-box > li:eq(' + (n - 1) + ') > ul.inner').addClass('on'); 
@@ -1559,6 +1438,34 @@ function showTab(n) {
 
   showTab === n;
 } 
+
+
+
+//모바일
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
