@@ -432,7 +432,7 @@
           <ul class="title">
             <li><a href="#">분위기 있는 서울</a>
               <div class="inner-box">
-                <ul>
+                <ul class="banner">
                   <li>
                     <a href="#">
                       <img alt="bookcafe" src="img/intro/getImage (16).png">
@@ -786,7 +786,7 @@
           <div class="content">
             <div class="map on">
               <ul>
-                <li class="on"><a href="#"><img alt="여의도" src="img/intro/map-01.png" /></a></li>
+                <li><a href="#"><img alt="여의도" src="img/intro/map-01.png" /></a></li>
                 <li><a href="#"><img alt="이태원" src="img/intro/map-02.png" /></a></li>
                 <li><a href="#"><img alt="광화문" src="img/intro/map-03.png" /></a></li>
                 <li><a href="#"><img alt="잠실" src="img/intro/map-04.png" /></a></li>
@@ -1338,23 +1338,23 @@ showBanner(bannerNow);
 
 
 //헤더
-$('#gnb > ul.pc-gnb > li > a').on('mouseenter', function() {
+$('#gnb > ul.pc-gnb > li > a').on('mouseenter focus', function() {
   $(this).parent().addClass('open');
 });
-$('#gnb > ul.pc-gnb > li > a').on('mouseleave', function() {
+$('#gnb > ul.pc-gnb > li > a').on('mouseleave focus', function() {
   $(this).parent().removeClass('open');
 });
-$('#gnb > ul.pc-gnb > li > div.sub').on('mouseenter', function() {
+$('#gnb > ul.pc-gnb > li > div.sub').on('mouseenter focus', function() {
   $(this).parent().addClass('open');
 });
-$('#gnb > ul.pc-gnb > li > div.sub').on('mouseleave', function() {
+$('#gnb > ul.pc-gnb > li > div.sub').on('mouseleave focus', function() {
   $(this).parent().removeClass('open');
 });
   
 
 
 //side-menu
-$('#side-menu > li').on('click', function(){
+$('#side-menu > li').on('click focus', function(){
   $(this).toggleClass('open');
 });
 
@@ -1363,7 +1363,7 @@ $('#side-menu > li').on('click', function(){
 //quick-menu
 var classOn = true;
 
-$('#wrapper > div.quick-menu > p').on('click', function() {
+$('#wrapper > div.quick-menu > p').on('click focus', function() {
   if (classOn === true) {
     menuOn();
   } else {
@@ -1412,21 +1412,23 @@ var selectTab = 1;
 
 showTab(1);
 
-  $('div.map > ul > li > a').on('click', function(n) {
+  $('div.map > ul > li > a').on('click focus', function(n) {
   var index = $('div.map > ul > li').index($(this).parent());
   $('ul.tab-box > li > h4 > a').removeClass('on');
   $('ul.tab-box > li:eq('+ index +') > h4 > a').addClass('on');
-  
+  $('div.map > ul > li').removeClass('on');
+  $(this).parent().addClass('on');
   showTab(index + 1);
 
   });
 
 
-  $('ul.tab-box > li > h4 > a').on('click', function(n) {
+  $('ul.tab-box > li > h4 > a').on('click focus', function(n) {
   var num = $('ul.tab-box > li > h4').index($(this).parent());
   $('ul.tab-box > li > h4 > a').removeClass('on');
   $(this).addClass('on');
-  
+  $('div.map > ul > li').removeClass('on');
+  $('div.map > ul > li:eq('+ num +')').addClass('on');
   showTab(num + 1);
   }); 
 
@@ -1442,7 +1444,6 @@ function showTab(n) {
 
 
 //모바일
-
 
 
 

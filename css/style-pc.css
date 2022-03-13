@@ -274,6 +274,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 
 
 #hotplace div.content div.map > ul > li:hover {transform: scale(1.3); transition: all 0.3s;}
+#hotplace div.content div.map > ul > li.on {transform: scale(1.3); transition: all 0.3s;}
 #hotplace div.content div.map-info {position: absolute; width: 1200px; height: 350px; top: 600px; left: 50%; transform: translate(-50%, 0);}
 #hotplace div.content div.map-info > div.inner-box > ul {position: absolute; left: 50%; top: 0; transform: translate(-50%, 0);}
 
