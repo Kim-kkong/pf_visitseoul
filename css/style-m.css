@@ -276,15 +276,15 @@ body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-si
 
 #post {position: relative; top: 60px; width: 100%;}
 
-#post ul.top {position: absolute; width: 90vw; left: 5%; top: 0; padding: 25px 0; font-size: 16px; }
+#post ul.top {position: absolute; width: 90vw; left: 10%; top: 0; padding: 25px 0; font-size: 16px; }
 #post ul.top li {float: left;}
 #post ul.top li i {color: #000000; font-size: 18px; top: -2px;}
 
 #post ul.top li + li {margin-left: 10px;}
 #post ul.top li + li::before {content: '>'; padding-right: 10px; }
-#post ul.top li h3 {position: absolute; left: 21%; top: 33%; font-size: 18px; line-height: 20px;}
+#post ul.top li h3 {position: absolute; left: 24%; top: 33%; font-size: 18px; line-height: 23px;}
 
-#post div.sub {position: absolute; top: 60px; left: 5%;}
+#post div.sub {position: absolute; top: 60px; left: 10%;}
 #post div.sub ul li {position: relative; float: left; top: 10px; width: 70px;}
 #post div.sub ul li.on p {color: #137DC3; font-weight: 800;}
 #post div.sub ul li + li::before {content: '|';}
@@ -308,12 +308,12 @@ body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-si
 #post div.post-list > ul > li + li {margin-top: 100px;}
 #post div.post-list > ul > li > a > div.img { width: 100%; height: 100%; overflow: hidden; border-radius: 3px;}
 #post div.post-list > ul > li > a > div.img img {width: 100%; border-radius: 3px;}
-#post div.post-list > ul > li > a > div.detail {position: relative; width: 95%; height: 50%; top: -30px; left: 0; margin-left: 10px; background-color: #ffffff; border-radius: 5px;}
+#post div.post-list > ul > li > a > div.detail {position: relative; width: 95%; height: 50%; top: -30px; left: 0; margin-left: 10px; background-color: #ffffff; border-radius: 5px; }
 #post div.post-list > ul > li > a > div.detail:hover {top: -80px; transition: all 0.5s;}
 #post div.post-list > ul > li > a > div.detail:hover h4 {color: #137DC3;}
 
-#post div.post-list > ul > li > a > div.detail h4 {font-size: 20px; color: #222222; padding: 15px 0 10px 10px; width: 440px; font-weight: 800;}
-#post div.post-list > ul > li > a > div.detail p {padding: 0px 0 10px 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 390px; height: 28px; font-size: 15px;}
+#post div.post-list > ul > li > a > div.detail h4 {font-size: 20px; color: #222222; padding: 15px 0 10px 10px; width: 360px; font-weight: 800; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+#post div.post-list > ul > li > a > div.detail p {padding: 0px 0 10px 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 350px; height: 25px; font-size: 15px;}
 #post div.post-list > ul > li > a > div.detail div {position: relative;  width: 26px; height: 26px; margin: 15px 0 0 90%;  border: 1px solid #137DC3; border-radius: 100px; background-color: #137DC3; display: none; }
 #post div.post-list > ul > li > a > div.detail div > i {top: 5px; left: 7px; color: #ffffff; display: none;}
 #post div.post-list > ul > li > a > div.detail:hover div {position: relative; width: 26px; height: 26px; margin: 15px 0 0 90%;  border: 1px solid #137DC3; border-radius: 100px; background-color: #137DC3; display: block;}
@@ -336,10 +336,11 @@ body.newyear #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; fon
 
 
 #sub-post {position: relative; top: 90px; height: 4700px;}
-#sub-post ul.top {position: absolute; width: 90vw; left: 5%; top: 0; padding: 25px 0; font-size: 16px; }
+#sub-post ul.top {position: absolute; width: 90vw; left: 6%; top: 0; padding: 25px 0; font-size: 16px; }
 #sub-post ul.top li {float: left;}
 #sub-post ul.top li i {color: #000000; font-size: 18px; top: -2px;}
 #sub-post ul.top li + li {margin-left: 10px;}
+
 #sub-post ul.top li + li::before {content: '>'; padding-right: 10px; }
 #sub-post ul.top li h3 {position: absolute; left: 23%; top: 33%; font-size: 18px; line-height: 20px;}
 
