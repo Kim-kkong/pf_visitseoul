@@ -174,7 +174,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #season ul.title li div.inner-box ul li:nth-child(3) > a div.hover {left: 810px;}
 #season ul.title li div.inner-box ul li:nth-child(2):hover > a div.hover {left: 405px;}
 #season ul.title li div.inner-box ul li:nth-child(3):hover > a div.hover {left: 810px;}
-
+#season ul.title li div.inner-box p.control {display: none;}
 #season ul.title li div.inner-box ul li a div.hover p {position: relative; top: 47%; left: 37%;  color: #ffffff; font-weight: 700; display:  none;} 
 #season ul.title li div.inner-box ul li:hover a div.hover {position: absolute; left: 0; top: 0; width: 380px; height: 277px; text-align: center; z-index: 1000000; background-color: #000000; opacity: 0.7; display: block;}
 #season ul.title li div.inner-box ul li:hover a div.hover p {position: relative; top: 47%; left: 37%;  color: #ffffff; font-weight: 700; display: block;} 
@@ -258,7 +258,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #festival div.box p.control {position: absolute; top: 35%; width: 100%;}
 #festival div.box p.control a img {width: 60px; height: 60px;}
 #festival div.box p.control a.prev {left: 0;}
-#festival div.box p.control a.next {position: absolute; right:0;}
+#festival div.box p.control a.next {position: absolute; right:0;}                                                                                   
 
 
 #hotplace {position: relative; width: 100%; height: 1500px;}
@@ -271,22 +271,14 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #hotplace div.content div.map > ul > li:nth-child(3) {position: absolute; left: 50%; top: 38%;}
 #hotplace div.content div.map > ul > li:nth-child(4) {position: absolute; left: 67%; top: 50%;}
 #hotplace div.content div.map > ul > li:nth-child(5) {position: absolute; left: 58%; top: 48%;}
-
-
 #hotplace div.content div.map > ul > li:hover {transform: scale(1.3); transition: all 0.3s;}
 #hotplace div.content div.map > ul > li.on {transform: scale(1.3); transition: all 0.3s;}
 #hotplace div.content div.map-info {position: absolute; width: 1200px; height: 350px; top: 600px; left: 50%; transform: translate(-50%, 0);}
 #hotplace div.content div.map-info > div.inner-box > ul {position: absolute; left: 50%; top: 0; transform: translate(-50%, 0);}
-
-
-
-
 #hotplace div.content div.map-info > div.inner-box > ul > li > h4 {font-size: 20px; color: #555555; font-weight: 200;}
-
 #hotplace div.content div.map-info > div.inner-box > ul > li {float: left;}
 #hotplace div.content div.map-info > div.inner-box > ul > li > h4 > a {display: block; padding: 10px 25px;}
 #hotplace div.content div.map-info > div.inner-box > ul > li > h4 > a.on {font-weight: 600; color: #000000; border-bottom: 4px solid #000000;}
-
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner {overflow: hidden; display: none; }
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner.on {overflow: hidden; display: block;}
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner {position: absolute; top: 60px; width: 1200px; left: 50%; transform: translate(-50%, 0);}
@@ -299,12 +291,11 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner li a div.hover p {display: none;}
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner li a div:hover {width: 274px; height: 180px; background-color: rgba(0, 0, 0, 0.7); transition: 0.3s;}
 #hotplace div.content div.map-info > div.inner-box  > ul li ul.inner li a div:hover p {display: block; position: relative; top: 40%; color: #ffffff; font-weight: 700;}
-
-
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner li + li {margin-left: 34px;}
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner li img {width: 100%; height: 180px;}
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner li h5 {font-size: 25px; color: #333333; font-weight: 400; padding: 10px 0 10px 0;}
 #hotplace div.content div.map-info > div.inner-box > ul li ul.inner li p {overflow: hidden; text-overflow: ellipsis; display:-webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+#hotplace div.content div.map-info > div.inner-box > p.control {display: none;}
 
 
 
@@ -467,7 +458,7 @@ body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-si
 #post div.post-list > ul > li > a > div.detail h4 {font-size: 17px; color: #000000; padding: 15px 0 10px 10px; width: 240px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 #post div.post-list > ul > li > a > div.detail p {padding: 0px 0 10px 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; width: 240px; height: 28px;}
 
-#post div.post-list > ul > li > a > div.detail:hover div {position: relative; width: 26px; height: 26px; margin: 30px 0 0 220px;  border: 1px solid #137DC3; border-radius: 100px; background-color: #137DC3; display: block;}
+#post div.post-list > ul > li > a > div.detail:hover div:last-child {position: relative; width: 26px; height: 26px; margin: 30px 0 0 220px;  border: 1px solid #137DC3; border-radius: 100px; background-color: #137DC3; display: block;}
 #post div.post-list > ul > li > a > div.detail div > i {top: 3px; left: 7px; color: #ffffff;}
 
 #post ul.page-indicator {position: absolute; width: 1200px; height: 80px; left: 48%; top: 80%; transform: translate(-50%, 0);}
@@ -539,10 +530,8 @@ body.newyear #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; fon
 
 
 #reply {position: relative; left: 0; top: 0; min-width: 770px; height: 400px;}
-
 #reply div.inner-box {position: absolute; width: 1200px; left: 50%; top: 0; transform: translate(-50%, 0); padding-top: 50px;}
 #reply div.inner-box > ul {position: absolute;}
-
 #reply div.inner-box > ul li {float: left; width: 30px; height: 30px; content: ''; display: inline-block; text-indent: -9999px;}
 #reply div.inner-box > ul li + li {margin-left: 10px;}
 #reply div.inner-box > ul li:nth-child(1) {background: url("../img/newyear/ico-box.png") -681px -184px no-repeat;}
@@ -561,6 +550,49 @@ body.newyear #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; fon
 
 #reply p {position: absolute; top: 250px; text-align: center; width: 1200px; font-size: 14px; color: #757575;}
 #reply img {position: absolute; top: 200px; left: 50%; transform: translate(-50%, 0);}
+
+
+div.quick-menu > div.point {left: -30px; top: 135px; z-index: 1000000;}
+div.quick-menu > ul > li > a > div.point {left: 30px; top: 20px; z-index: 1000000;}
+div.inner > ul > li > a > div.point {left: -10px; top: 0; z-index: 1000000;}
+div.detail > div.point {left: 5px; top: 15px;}
+ul.pc-gnb > li > a > div.point {left: 170px; top: 10px;}
+
+
+
+
+.point {position: absolute; width: 5px; height: 5px; border-radius: 5px; background-color: #ff0000; text-indent: -99999px; display: inline-block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

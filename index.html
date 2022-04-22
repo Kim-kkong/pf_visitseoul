@@ -23,10 +23,14 @@
       <a href="#main" id="skip-nav">본문 바로가기</a>
       
       <div class="quick-menu">
+        <div class="point"><span>포인트</span></div>
         <p>Quick Menu<span class="material-icons">expand_more</span></p>
         
         <ul>
-          <li><a href="page/editors_pick.html"><img alt="에디터추천여행" src="img/icn_quickMenu_pick@2x.png"><span>에디터추천여행</span></a></li>
+          <li><a href="page/editors_pick.html">
+            <div class="point"><span>포인트</span></div>
+            <img alt="에디터추천여행" src="img/icn_quickMenu_pick@2x.png"><span>에디터추천여행</span>
+          </a></li>
           <li><a href="#"><img alt="뉴스레터" src="img/icn_quickMenu_newsletter@2x.png"><span>뉴스레터</span></a></li>
           <li><a href="#"><img alt="FAQ" src="img/icn_quickMenu_faq@2x.png"><span>FAQ</span></a></li>
           <li class="last-list">
@@ -84,7 +88,6 @@
             <a href="#"><img alt="menu" src="img/ico-search-gray@2x.png" /></a>
           </div>
           <nav id="gnb">
-
             <div class="mobile-gnb">
               <div class="title"> 
                 <img alt="상단" class="logo" src="img/intro/ico_logo@2x.png" />
@@ -177,7 +180,7 @@
               </li>
 
               <li>
-                <a href="#">추천<i class="fas fa-chevron-down"></i></a>
+                <a href="#"><div class="point"><span>포인트</span></div>추천<i class="fas fa-chevron-down"></i></a>
                 <div class="sub">
                   <div class="content">
                   <div class="title">
@@ -186,7 +189,7 @@
                   </div>
                   <div class="inner">
                     <ul>
-                      <li><a href="page/editors_pick.html">에디터 추천 여행</a></li>
+                      <li><a href="page/editors_pick.html"><div class="point"><span>포인트</span></div>에디터 추천 여행</a></li>
                       <li><a href="#">서울관광 추천 테마코스</a></li>
                       <li><a href="#">서울도보해설관광</a></li>
                       <li><a href="#">한류관광</a></li>
@@ -275,7 +278,6 @@
             </ul>
           </nav>
           
-
           <ul id="side-menu" class="side">
             <li>
               <div class="title">
@@ -390,7 +392,7 @@
         </div>  
       </header>
       
-      <main id="main">
+      <main id="main" class="hidden-main">
         <section id="main-visual">
           <h2>
             <em>See You in SEOUL</em>서울에서 만나요
@@ -433,7 +435,7 @@
           <ul class="title">
             <li><a href="#">분위기 있는 서울</a>
               <div class="inner-box">
-                <ul class="banner">
+                <ul class="tabBox">
                   <li>
                     <a href="#">
                       <img alt="bookcafe" src="img/intro/getImage (16).png">
@@ -443,9 +445,7 @@
                       <h5>서울 북카페 5</h5>
                       <p>특별한 공간 경험을 주는 곳</p>
                     </a>
-                    
                   </li>
-    
                   <li>
                     <a href="#">
                       <img alt="brewery" src="img/intro/getImage (14).png">
@@ -464,12 +464,16 @@
                     </a>
                   </li>
                 </ul>
+                <p class="control">
+                  <a href="#" class="prev"><img alt="이전" src="img/prev-icon.png" /></a>
+                  <a href="#" class="next"><img alt="다음" src="img/next-icon.png" /></a>
+                </p>
               </div>
             
             </li>
             <li><a href="#">로맨틱한 연말</a>
               <div class="inner-box">
-                <ul>
+                <ul class="tabbox">
                   <li>
                     <a href="#">
                       <img alt="date" src="img/intro/getImage (17).png">
@@ -497,11 +501,15 @@
                     </a>
                   </li>
                 </ul>
+                <p class="control">
+                  <a href="#" class="prev"><img alt="이전" src="img/prev-icon.png" /></a>
+                  <a href="#" class="next"><img alt="다음" src="img/next-icon.png" /></a>
+                </p>
               </div>
             </li>
             <li><a href="#">로컬문화체험</a>
               <div class="inner-box">
-                <ul>
+                <ul class="tabbox">
                   <li>
                     <a href="#">
                       <img alt="date" src="img/intro/getImage (20).png">
@@ -529,8 +537,11 @@
                     </a>
                   </li>
                 </ul>
+                <p class="control">
+                  <a href="#" class="prev"><img alt="이전" src="img/prev-icon.png" /></a>
+                  <a href="#" class="next"><img alt="다음" src="img/next-icon.png" /></a>
+                </p>
               </div> 
-            
             </li>
           </ul>
         </section>
@@ -539,7 +550,7 @@
           <div class="slide-box">
             <div class="box-inner">
               <p class="dummy"><img alt="" src="img/intro/banner01.png" /></p>
-              <ul class="slide">
+              <ul class="slide swipe-box">
                 <li>
                   <a href="#"><img alt="detail" src="img/intro/banner01.png"></a>
                 </li>
@@ -621,164 +632,166 @@
 
         <section id="festival">
           <h3>축제&amp;행사</h3>
-          <div class="box">
-            <ul class="banner">
-              <li><a href="#"><img alt=" " src="img/intro/img01.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+          <div class="banner-slide">
+            <div class="box">
+              <ul class="banner">
+                <li><a href="#"><img alt=" " src="img/intro/img01.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img02.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ 2020.08.11</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img02.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ 2020.08.11</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img03.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img03.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img04.png" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ 2020.08.11</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img04.png" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ 2020.08.11</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img05.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img05.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img06.png" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img06.png" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img07.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img07.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img08.png" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img08.png" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img09.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img09.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img10.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img10.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img11.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img11.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img12.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img12.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img13.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img13.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img14.png" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img05.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img15.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img15.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img16.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img16.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img17.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img17.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img18.jpg" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ (계속)</p>
-                </div>
-              </a></li>
+                <li><a href="#"><img alt=" " src="img/intro/img18.jpg" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ (계속)</p>
+                  </div>
+                </a></li>
 
-              <li><a href="#"><img alt=" " src="img/intro/img19.png" />
-                <div>
-                  <em>전시</em>
-                  <p>동대문역사관 상설전시장</p>
-                  <p>2020.08.11 ~ 2020.08.11</p>
-                </div>
-              </a></li>
-            </ul>
-            <p class="control">
-              <a href="#" class="prev"><img alt="이전" src="img/prev-icon.png" /></a>
-              <a href="#" class="next"><img alt="다음" src="img/next-icon.png" /></a>
-            </p>
+                <li><a href="#"><img alt=" " src="img/intro/img19.png" />
+                  <div>
+                    <em>전시</em>
+                    <p>동대문역사관 상설전시장</p>
+                    <p>2020.08.11 ~ 2020.08.11</p>
+                  </div>
+                </a></li>
+              </ul>
+              <p class="control">
+                <a href="#" class="prev"><img alt="이전" src="img/prev-icon.png" /></a>
+                <a href="#" class="next"><img alt="다음" src="img/next-icon.png" /></a>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -795,11 +808,10 @@
               </ul>
             </div>
             <div class="map-info">
-              <div class="inner-box">
+              <div class="inner-box" >
                 <ul class="tab-box">
                   <li>
                     <h4><a href="#">여의도</a></h4>
-
                     <ul class="inner">
                       <li><a href="#">
                         <img alt="한강예술공원" src="img/intro/hp1-1.png" />
@@ -811,7 +823,7 @@
                         <img alt="63스퀘어" src="img/intro/hp1-2.jpg" />
                         <div class="hover"><p>자세히보기</p></div>
                         <h5>63스퀘어</h5>
-                        <p>여의도 63빌딩은 볼거리, 먹을거리, 즐길거리 등을 갖춘 복합 공간이다. 빌딩의 맨 꼭대기, 63 스카이텍은 전망 하나만으로 모든 걸 압도한다. </p>
+                        <p>여의도 63빌딩은 볼거리, 먹을거리, 즐길거리 등을 갖춘 복합 공간이다. 빌딩의 맨 꼭대기, 63 스카이텍은 전망 하나만으로 모든 걸 압도한다.</p>
                       </a></li>
                       <li><a href="#">
                         <img alt="국회의사당" src="img/intro/hp1-3.jpg" />
@@ -944,6 +956,10 @@
                     </ul>
                   </li>
                 </ul>
+                <p class="control">
+                  <a href="#" class="prev"><img alt="이전" src="img/prev-icon.png" /></a>
+                  <a href="#" class="next"><img alt="다음" src="img/next-icon.png" /></a>
+                </p>
               </div>
             </div>
           </div>
@@ -1129,10 +1145,15 @@
         </div>
       </footer>
     </div>
-    
+
+
+<script>
+  'use strict'
+
+
+
+</script>
   
-
-
 
   </body>
 </html>

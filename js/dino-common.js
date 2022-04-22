@@ -51,10 +51,27 @@ $(document).ready(function() {
   }
 
 
-
-
-
-
+  //mobile gnb
+  $('#header a.menu').on('click', function() {
+    $('#gnb').addClass('open');
+    $('body.main').css({'overflow' : 'hidden'});
+    });
+    
+    $('#gnb div.mobile-gnb > div.title > a > img.close').on('click', function() {
+    $('#gnb').removeClass('open');
+    $('body.main').removecss({'overflow' : 'hidden'});
+    });
+    
+    
+    $('#gnb ul.sub-menu > li > a').on('click', function() {
+      $(this).parent().find('.select').toggleClass('on');
+    });
+    
+    $('#gnb > ul.pc-gnb > li').on('click', function(e) {
+        $('#gnb > ul.pc-gnb > li').removeClass('on');
+        $(this).addClass('on');
+        
+    });
 });
 
 
