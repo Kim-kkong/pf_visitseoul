@@ -62,7 +62,6 @@ $(document).ready(function() {
     $('body.main').removecss({'overflow' : 'hidden'});
     });
     
-    
     $('#gnb ul.sub-menu > li > a').on('click', function() {
       $(this).parent().find('.select').toggleClass('on');
     });
@@ -70,8 +69,12 @@ $(document).ready(function() {
     $('#gnb > ul.pc-gnb > li').on('click', function(e) {
         $('#gnb > ul.pc-gnb > li').removeClass('on');
         $(this).addClass('on');
-        
     });
+
+    $('#wrapper a.top-button').on('click', function() {
+      $('html, body').stop(true).animate({'scrollTop': 0}, 500);
+    });
+  
 });
 
 

@@ -122,7 +122,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 #side-menu li div.language ul li a span {font-size: 9px; color: #188BD8;}
 
 
-#main {position: relative; top: 0; left: 0;}
+#main {position: relative; top: 0; left: 0; overflow: hidden;}
 #main-visual {position: relative;}
 #main-visual h2 {position: absolute; left: 30%; top: 35%; transform: translate(-50%, 50%); font-size: 14px; font-weight: 600; color: #ffffff; width: 420px; z-index: 100;}
 #main-visual h2 > em {font-size: 48px;}
@@ -410,7 +410,7 @@ body {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; 
 
 /* sub-에디터추천여행 */
 
-body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; color: #666666; background: #ffffff;}
+body.sub #main {font-family: 'NotoSansKR''Tangerine', sans-serif, serif; font-size: 14px; color: #666666; background: #ffffff; overflow: hidden;}
 
 #sub_main-visual {position: relative; top: 90px;}
 #sub_main-visual > div {width: 1920px; height: 674px;}
@@ -557,8 +557,6 @@ div.quick-menu > ul > li > a > div.point {left: 30px; top: 20px; z-index: 100000
 div.inner > ul > li > a > div.point {left: -10px; top: 0; z-index: 1000000;}
 div.detail > div.point {left: 5px; top: 15px;}
 ul.pc-gnb > li > a > div.point {left: 170px; top: 10px;}
-
-
 
 
 .point {position: absolute; width: 5px; height: 5px; border-radius: 5px; background-color: #ff0000; text-indent: -99999px; display: inline-block;}

@@ -270,7 +270,7 @@
 
 
 //hotplace_mobile
-var numPlace = 0;
+/* var numPlace = 0;
 var placeNow = 1;
 var placePrev = 0;
 var placeNext = 0;
@@ -368,7 +368,7 @@ function setStatus02() {
 
 
 
-
+ */
 
 
 
